@@ -1,4 +1,3 @@
-import bcrypt
 from flask import render_template, redirect, session, flash
 from flask_app import app
 
