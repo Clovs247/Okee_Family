@@ -1,4 +1,4 @@
-from flask import render_template, redirect, session, flash
+from flask import render_template, redirect, session
 from flask_app import app
 from flask_app.models import user
 
@@ -6,7 +6,8 @@ from flask_app.models import user
 
 @app.route('/')
 def index():
-    return render_template("index.html")
+    return "success"
+    # return render_template("index.html")
 
 @app.route('/dashboard/')
 def dashboard():
