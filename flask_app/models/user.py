@@ -117,3 +117,6 @@ class User:
             is_valid = False
             flash("Password are not matching, double check your spelling.")
         return is_valid
+
+# &&&&&&&&&&&&&&&&&&&&&&&&&&&&&& Connection &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+

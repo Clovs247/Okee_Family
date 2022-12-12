@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <header>
+        <nav>
+            {% block menu %} {% include 'logged_in_menu.html' %} {% endblock menu %}
+        </nav>
+    </header>
+    <div class="car-form-container">
+        <form action="/register/" method="post" id="login_reg_form">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <strong class="error-par">Hold Up, Chum</strong>
+                    {% for message in messages %}
+                        <p id="error-info">{{message}}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            
+            <label>
+                Car Type/Name:
+                <input type="text" name="car_name" id="car_name">
+            </label>
+            <label>
+                Car Capacity(Including the driver):
+                <input type="number" name="car_capacity" id="car_capacity">
+            </label>
+
+            <input type="submit" value="Register" id="submit">
+            
+        </form>
+    </div>
+</body>
+</html>
