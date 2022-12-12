@@ -4,6 +4,7 @@ from flask_app.models import user
 from flask import render_template, redirect, request, session, flash
 from flask_bcrypt import Bcrypt
 
+bcrypt= Bcrypt(app)
 
 @app.route('/login/form/')
 def legin_form():
@@ -50,3 +51,8 @@ def register():
         else:
             session["user_id"] = id
             return redirect('/dashboard/')
+
+@app.route('/logout/')
+def logout():
+    session.clear()
+    return redirect('/')
