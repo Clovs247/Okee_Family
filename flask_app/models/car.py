@@ -9,6 +9,7 @@ class Car:
         self.id = data['id']
         self.car_name = data['car_name']
         self.car_capacity = data['car_capacity']
+        self.driver = data['driver']
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
         
@@ -21,9 +22,9 @@ class Car:
     def create_car(cls, data):
         query="""
         INSERT INTO car
-        (car_name, car_capacity)
+        (car_name, car_capacity, driver)
         VALUES
-        (%(car_name)s, %(car_capacity)s)
+        (%(car_name)s, %(car_capacity)s, %(user_id)s)
         ;"""
         car_id = connectToMySQL(cls.db).query_db(query, data)
         data["car_id"] = car_id
@@ -78,7 +79,36 @@ class Car:
     
     @classmethod
     def get_car_by_driver(cls, data):
-        pass
+        query="""
+        SELECT * FROM car
+        WHERE driver = %(driver)s
+        ;"""
+        results = connectToMySQL(cls.db).query_db(query, data)
+        return results
+    
+    @classmethod
+    def get_car_with_passengers(cls, data):
+        query = """
+        SELECT * FROM car
+        LEFT JOIN passenger
+        ON passenger.car_id = car.id
+        LEFT JOIN user
+        ON passenger.user_id = user.id
+        WHERE team.id = %(id)s
+        ;"""
+        results = connectToMySQL(cls.db).query_db(query, data)
+        vessel = cls(results[0])
+        for row_from_db in results:
+            user_data = {
+                "id":row_from_db["user.id"],
+                "username":row_from_db["user.username"],
+                "email":row_from_db["user.email"],
+                "created_at":row_from_db["user.created_at"],
+                "updated_at":row_from_db["user.updated_at"]
+            }
+            rider = user.User(user_data)
+            vessel.passengers.append(rider)
+        return vessel
     
     @classmethod
     def get_passengers(cls, data):
@@ -96,6 +126,24 @@ class Car:
 # &&&&&&&&&&&&&&&&&&&&&&&&&&&&&& Update &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 # &&&&&&&&&&&&&&&&&&&&&&&&&&&&&& Delete &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+    @classmethod
+    def delete_car(cls, data):
+        query = """
+        DELETE FROM car
+        WHERE id = %(id)s
+        ;"""
+        return connectToMySQL(cls.db).query_db(query, data)
+    
+    @classmethod
+    def leave_team(cls, data):
+        query="""
+        DELETE FROM passenger
+        WHERE user_id = %(user_id)s
+        AND car_id = %(car_id)s
+        ;"""
+        return connectToMySQL(cls.db).query_db(query, data)
+
 
 # &&&&&&&&&&&&&&&&&&&&&&&&&&&&&& Validate &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
@@ -117,3 +165,14 @@ class Car:
             is_valid=False
             flash("ARE YOU DRIVING A BUS?!")
         return is_valid
+    
+    @staticmethod
+    def validate_rider(rider):
+        query="""
+        SELECT * FROM passenger
+        WHERE user_id = %(id)s
+        AND car_id = %(car_id)s
+        ;"""
+        results = connectToMySQL(Car.db).query_db(query, rider)
+        if len(results)>0:
+            flash("One seat can fit One rider. Leave the extra seat to someone else.")

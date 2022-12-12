@@ -16,4 +16,9 @@ def dashboard():
         }
         logged_in_user = user.User.get_user_by_id(data)
         all_users = user.User.get_all_users()
-        return render_template('dashboard.html', logged_in_user, all_users)
+        return render_template('dashboard.html', logged_in_user=logged_in_user)
+    
+@app.route('/logout/')
+def logout():
+    session.clear()
+    return redirect('/')

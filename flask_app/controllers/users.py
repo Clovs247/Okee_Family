@@ -52,7 +52,3 @@ def register():
             session["user_id"] = id
             return redirect('/dashboard/')
 
-@app.route('/logout/')
-def logout():
-    session.clear()
-    return redirect('/')
