@@ -8,6 +8,12 @@
 </head>
 <body>
 
+    <header>
+        <nav>
+            {% block menu %} {% include 'menu.html' %} {% endblock menu %}
+        </nav>
+    </header>
+
     <div  id="login_container">
         <form action="/login/" method="post" id="login_reg_form">
             {% with messages = get_flashed_messages() %}
