@@ -5,10 +5,6 @@ from flask import render_template, redirect, request, session, flash
 from flask_bcrypt import Bcrypt
 
 
-@app.route('/')
-def index():
-    render_template('index.html')
-
 @app.route('/login/form/')
 def legin_form():
     if "user_id" not in session:
