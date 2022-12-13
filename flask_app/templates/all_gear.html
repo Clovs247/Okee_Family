@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>All Gear</title>
+</head>
+<body>
+    <header>
+        <nav>
+            {% block menu %} {% include 'logged_in_menu.html' %} {% endblock menu %}
+        </nav>
+    </header>
+    <div class="all-gear-container">
+        {% for gear in all_gear %}
+            <div>
+                <h3>{{gear.name}}</h3>
+                <h5>Being brought by: {{gear.username}}</h5>
+                <h5>{{gear.quantity}}</h5>
+                <h5>{{gear.description}}</h5>
+                
+                <a href="/gear/{{gear.id}}/view/">
+                    <span>View</span>
+                </a>
+                {% if gear.owner == logged_in_user.id %}
+                    <a href="">
+                        <span>Delete</span>
+                    </a>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>View Gear</title>
+</head>
+<body>
+    <header>
+        <nav>
+            {% block menu %} {% include 'logged_in_menu.html' %} {% endblock menu %}
+        </nav>
+    </header>
+    <div class="gear-container">
+        
+            <div>
+                <h3>{{tool.name}}</h3>
+                <h3>{{tool.quantity}}</h3>
+                <h3>{{tool.description}}</h3>
+                
+                {% if tool.username == logged_in_user.id %}
+                    <a href="">
+                        <span>Delete</span>
+                    </a>
+                {% endif %}
+            </div>
+        
+    </div>
+</body>
+</html>
