@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <title>Register Form</title>
 </head>
-<body>
+<body class="login_background">
     
     <header>
         <nav>
@@ -26,19 +28,19 @@
             {% endwith %}
             
             <label>
-                Username:
+                <span>Username:</span>
                 <input type="text" name="username" id="username">
             </label>
             <label>
-                Email:
+                <span>Email:</span>
                 <input type="email" name="email" id="email">
             </label>
             <label>
-                Password:
+                <span>Password:</span>
                 <input type="password" name="password" id="password">
             </label>
             <label>
-                Confirm Password:
+                <span>Confirm Password:</span>
                 <input type="password" name="confirm_password" id="confirm_password">
             </label>
             <input type="submit" value="Register" id="submit">

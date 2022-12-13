@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <title>All Cars</title>
+    <title>View Car</title>
 </head>
 <body>
     <header>
@@ -20,6 +20,9 @@
                 <h3>{{vessel.car_capacity}}</h3>
                 {% for passenger in vessel.passengers %}
                     <p>{{passenger.username}}</p>
+                    {% if logged_in_user.id == passenger.id %}
+                        <a href="/car/{{vessel.id}}/leave">Leave</a>
+                    {% endif %}
                 {% endfor %}
                 {% if vessel.passengers|length < vessel.car_capacity %}
                 <form action="/join/{{vessel.id}}/form/" method="post">

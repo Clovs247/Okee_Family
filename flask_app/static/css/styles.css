@@ -1,0 +1,39 @@
+body{
+    margin:20px;
+    width: auto;
+    height: 100%;
+}
+.login_background{
+    background-image: url(/static/img/okeechobee_header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #4cccf0;
+}
+.login_container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.welcome_title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+#login_reg_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+#login_reg_form label{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#login_reg_form span{
+    padding: 10px;
+}
+#login_reg_form input{
+    padding: 10px;
+}

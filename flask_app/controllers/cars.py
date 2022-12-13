@@ -33,14 +33,14 @@ def form_car():
     car_data = {
         'car_name': request.form['car_name'],
         'car_capacity': request.form['car_capacity'],
-        'driver': session['user_id']
+        'user_id': session['user_id']
     }
     is_valid = car.Car.validate_car(car_data)
     if not is_valid:
         flash('Please enter in valid info.')
         return redirect('/')
     else:
-        print("**************************", car_data)
+        print("***********CREATE CAR FORM***************", car_data)
         car.Car.create_car(car_data)
         return redirect('/all_cars/')
     
@@ -85,3 +85,13 @@ def delete_car(car_id):
     }
     car.Car.delete_car(car_data)
     return redirect('/all_cars/')
+
+@app.route('/car/<int:car_id>/leave')
+def leave_car(car_id):
+    betrayer_data={
+        'user_id' :session['user_id'],
+        'car_id': car_id
+    }
+    print(betrayer_data)
+    car.Car.leave_car(betrayer_data)
+    return redirect(f'/car/{car_id}/view/')

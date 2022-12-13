@@ -24,16 +24,13 @@ class Car:
         INSERT INTO car
         (car_name, car_capacity, driver)
         VALUES
-        (%(car_name)s, %(car_capacity)s, %(driver)s)
+        (%(car_name)s, %(car_capacity)s, %(user_id)s)
         ;"""
-        results = connectToMySQL(cls.db).query_db(query, car_data)
-        car_data={
-            "car_id":results,
-            "user_id":results
-        }
-        print(results)
+        car_id = connectToMySQL(cls.db).query_db(query, car_data)
+        car_data["car_id"]=car_id
+        print("############CREATE METHOD#############",car_data)
         cls.join_ride(car_data)
-        return results
+        return car_id
     
     @classmethod
     def join_ride(cls, data):
@@ -43,6 +40,7 @@ class Car:
         VALUES
         (%(car_id)s, %(user_id)s)
         ;"""
+        print(data)
         return connectToMySQL(cls.db).query_db(query, data)
 
 # &&&&&&&&&&&&&&&&&&&&&&&&&&&&&& Read &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -103,7 +101,7 @@ class Car:
         ;"""
         results = connectToMySQL(cls.db).query_db(query, data)
         vessel = cls(results[0])
-        print("################", vessel.car_name)
+        # print("################", vessel.car_name)
         for row_from_db in results:
             user_data = {
                 "id":row_from_db["user.id"],
@@ -173,7 +171,7 @@ class Car:
         WHERE car_name = %(car_name)s
         ;"""
         results = connectToMySQL(Car.db).query_db(query, car_data)
-        print(results)
+        print("***************VALIDATE*************",car_data)
         if len(car_data['car_name']) <= 3:
             is_valid = False
             flash("Please name your car with at least 3 characters, so we know which car is which.")

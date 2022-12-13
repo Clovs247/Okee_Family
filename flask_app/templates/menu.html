@@ -3,13 +3,16 @@
 <body>
     {% block menu %}
     <div class="login_container">
-        <a href="/register/form/">Register</a>
-    </div>
-    <div class="login_container">
-        <a href="/">Home</a>
-    </div>
-    <div class="login_container">
-        <a href="/login/form/">Login</a>
+        <div class="login_link">
+            <a href="/register/form/" class="w3-bar-item w3-button w3-black">Register</a>
+        </div>
+        <div class="login_link">
+            <a href="/" class="w3-bar-item w3-button w3-black">Home</a>
+        </div>
+        <div class="login_link">
+            <a href="/login/form/" class="w3-bar-item w3-button w3-black">Login</a>
+        </div>
+
     </div>
     {% endblock menu %}
 </body>
