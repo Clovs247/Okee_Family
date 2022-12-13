@@ -19,17 +19,18 @@ class Car:
 # &&&&&&&&&&&&&&&&&&&&&&&&&&&&&& Create &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
     @classmethod
-    def create_car(cls, data):
+    def create_car(cls, car_data):
         query="""
         INSERT INTO car
         (car_name, car_capacity, driver)
         VALUES
-        (%(car_name)s, %(car_capacity)s, %(user_id)s)
+        (%(car_name)s, %(car_capacity)s, %(driver)s)
         ;"""
-        car_id = connectToMySQL(cls.db).query_db(query, data)
-        data["car_id"] = car_id
-        cls.join_ride(data)
-        return car_id
+        results = connectToMySQL(cls.db).query_db(query, car_data)
+        print(results)
+        car_data["car_id"] = results
+        cls.join_ride(car_data)
+        return results
     
     @classmethod
     def join_ride(cls, data):
@@ -40,6 +41,7 @@ class Car:
         (%(car_id)s, %(user_id)s)
         ;"""
         return connectToMySQL(cls.db).query_db(query, data)
+
 # &&&&&&&&&&&&&&&&&&&&&&&&&&&&&& Read &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
     @classmethod
@@ -165,15 +167,13 @@ class Car:
         WHERE car_name = %(car_name)s
         ;"""
         results = connectToMySQL(Car.db).query_db(query, car_data)
+        print(results)
         if len(car_data['car_name']) <= 3:
             is_valid = False
             flash("Please name your car with at least 3 characters, so we know which car is which.")
-        if car_data["car_capacity"] <=0:
-            is_valid=False
-            flash("Its not a ghost car, how many people fit in it?")
-        if car_data["car_capacity"] >10:
-            is_valid=False
-            flash("ARE YOU DRIVING A BUS?!")
+        if int(car_data['car_capacity']) < 0:
+            is_valid =False
+            flash("Please enter in how many people sit in your car.")
         return is_valid
     
     @staticmethod

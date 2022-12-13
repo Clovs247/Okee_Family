@@ -40,6 +40,7 @@ def form_car():
         flash('Please enter in valid info.')
         return redirect('/')
     else:
+        print("**************************", car_data)
         car.Car.create_car(car_data)
         return redirect('/all_cars/')
     
