@@ -125,6 +125,16 @@ class Car:
         return voyagers
 # &&&&&&&&&&&&&&&&&&&&&&&&&&&&&& Update &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
+    @classmethod
+    def update_car(cls, data):
+        query="""
+        UPDATE car SET
+        car_name = %(car_name)s
+        car_capacity = %(car_capacity)s
+        WHERE id = %(id)s
+        ;"""
+        return connectToMySQL(cls.db).query_db(query, data)
+
 # &&&&&&&&&&&&&&&&&&&&&&&&&&&&&& Delete &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
     @classmethod
