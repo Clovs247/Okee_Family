@@ -27,8 +27,11 @@ class Car:
         (%(car_name)s, %(car_capacity)s, %(driver)s)
         ;"""
         results = connectToMySQL(cls.db).query_db(query, car_data)
+        car_data={
+            "car_id":results,
+            "user_id":results
+        }
         print(results)
-        car_data["car_id"] = results
         cls.join_ride(car_data)
         return results
     
