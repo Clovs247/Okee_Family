@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>All Cars</title>
+</head>
+<body>
+    <header>
+        <nav>
+            {% block menu %} {% include 'logged_in_menu.html' %} {% endblock menu %}
+        </nav>
+    </header>
+    <div class="all-car-container">
+        
+            <div>
+                <h3>{{vessel.car_name}}</h3>
+                <h3>{{vessel.car_capacity}}</h3>
+                {% for passenger in vessel.passengers %}
+                    <p>{{passenger.username}}</p>
+                {% endfor %}
+                {% if vessel.passengers|length < vessel.car_capacity %}
+                <form action="/join/{{vessel.id}}/form/" method="post">
+                    
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            <strong class="error-par">Hold Up, Chum</strong>
+                            {% for message in messages %}
+                                <p id="error-info">{{message}}</p>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+
+                    <label>
+                        <input type="submit" value="Join">
+                    </label>
+                </form>
+                {% endif %}
+                
+            </div>
+        
+    </div>
+</body>
+</html>

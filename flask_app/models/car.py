@@ -96,15 +96,17 @@ class Car:
         ON passenger.car_id = car.id
         LEFT JOIN user
         ON passenger.user_id = user.id
-        WHERE team.id = %(id)s
+        WHERE car.id = %(id)s
         ;"""
         results = connectToMySQL(cls.db).query_db(query, data)
         vessel = cls(results[0])
+        print("################", vessel.car_name)
         for row_from_db in results:
             user_data = {
                 "id":row_from_db["user.id"],
-                "username":row_from_db["user.username"],
-                "email":row_from_db["user.email"],
+                "username":row_from_db["username"],
+                "email":row_from_db["email"],
+                "password":"",
                 "created_at":row_from_db["user.created_at"],
                 "updated_at":row_from_db["user.updated_at"]
             }
@@ -125,6 +127,7 @@ class Car:
         for row in results:
             voyagers.append(user.User(row))
         return voyagers
+
 # &&&&&&&&&&&&&&&&&&&&&&&&&&&&&& Update &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
     @classmethod
@@ -148,7 +151,7 @@ class Car:
         return connectToMySQL(cls.db).query_db(query, data)
     
     @classmethod
-    def leave_team(cls, data):
+    def leave_car(cls, data):
         query="""
         DELETE FROM passenger
         WHERE user_id = %(user_id)s
@@ -178,11 +181,14 @@ class Car:
     
     @staticmethod
     def validate_rider(rider):
+        is_valid=True
         query="""
         SELECT * FROM passenger
-        WHERE user_id = %(id)s
+        WHERE user_id = %(user_id)s
         AND car_id = %(car_id)s
         ;"""
         results = connectToMySQL(Car.db).query_db(query, rider)
         if len(results)>0:
             flash("One seat can fit One rider. Leave the extra seat to someone else.")
+            is_valid= False
+        return is_valid

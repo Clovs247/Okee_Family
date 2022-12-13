@@ -44,3 +44,44 @@ def form_car():
         car.Car.create_car(car_data)
         return redirect('/all_cars/')
     
+@app.route('/join/<int:car_id>/form/', methods = ['post'])
+def join_car(car_id):
+    val_data={
+        'user_id': session['user_id'],
+        'car_id': car_id
+    }
+    is_valid= car.Car.validate_rider(val_data)
+    if not is_valid:
+        
+        return redirect(f'/car/{car_id}/view/')
+    else:
+        car_data = {
+            'user_id': session['user_id'],
+            'car_id':car_id
+        }
+        car.Car.join_ride(car_data)
+        return redirect('/all_cars/')
+    
+@app.route('/car/<int:car_id>/view/')
+def view_car(car_id):
+    if 'user_id' not in session:
+        return redirect('/')
+    else:
+        data = {
+            'id': session['user_id']
+        }
+        car_data={
+            'id': car_id
+        }
+        logged_in_user = user.User.get_user_by_id(data)
+        vessel= car.Car.get_car_with_passengers(car_data)
+        print("$$$$$$$$$$$$$$$$$$$$$$$$$$$", vessel)
+        return render_template('view_car.html', logged_in_user=logged_in_user, vessel=vessel)
+    
+@app.route("/car/<int:car_id>/delete/")
+def delete_car(car_id):
+    car_data={
+        'id':car_id
+    }
+    car.Car.delete_car(car_data)
+    return redirect('/all_cars/')
