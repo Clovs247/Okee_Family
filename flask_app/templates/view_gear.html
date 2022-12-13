@@ -15,17 +15,15 @@
     </header>
     <div class="gear-container">
         
-            <div>
                 <h3>{{tool.name}}</h3>
                 <h3>{{tool.quantity}}</h3>
                 <h3>{{tool.description}}</h3>
                 
-                {% if tool.username == logged_in_user.id %}
+                {% if tool.username == logged_in_user.username %}
                     <a href="">
                         <span>Delete</span>
                     </a>
                 {% endif %}
-            </div>
         
     </div>
 </body>

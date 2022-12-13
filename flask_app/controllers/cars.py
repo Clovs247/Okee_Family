@@ -75,7 +75,7 @@ def view_car(car_id):
         }
         logged_in_user = user.User.get_user_by_id(data)
         vessel= car.Car.get_car_with_passengers(car_data)
-        print("$$$$$$$$$$$$$$$$$$$$$$$$$$$", vessel)
+        # print("$$$$$$$$$$$$$$$$$$$$$$$$$$$", vessel)
         return render_template('view_car.html', logged_in_user=logged_in_user, vessel=vessel)
     
 @app.route("/car/<int:car_id>/delete/")

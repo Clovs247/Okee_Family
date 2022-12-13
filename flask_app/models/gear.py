@@ -62,7 +62,7 @@ class Gear:
         WHERE gear.id = %(id)s
         ;"""
         results = connectToMySQL(cls.db).query_db(query, data)
-        print("##########################", results)
+        # print("##########################", results)
         return results
 
 
