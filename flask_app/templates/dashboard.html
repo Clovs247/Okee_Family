@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <title>Dashboard</title>
 </head>
 <body>
@@ -13,9 +14,20 @@
             {% block menu %} {% include 'logged_in_menu.html' %} {% endblock menu %}
         </nav>
     </header>
-    <div class="dashboard-container">
-        <h1>Welcome</h1>
-        <h2>{{logged_in_user.username}}</h2>
-    </div>
+    <main>
+        <div class="dashboard-container">
+            <h1>Welcome</h1>
+            <h2>{{logged_in_user.username}}</h2>
+        </div>
+    </main>
+    <footer>
+        <foot>
+            <div class="foot_container">
+                <p>Countdown to Okee</p>
+                <p id="countdown"></p>
+            </div>
+        </foot>
+    </footer>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js')}}"></script>
 </body>
 </html>

@@ -1,38 +1,103 @@
 body{
-    margin:50px;
+    margin:0px;
 }
 .login_background{
-    background: url(/static/img/okeechobee_header.jpg) no-repeat center fixed;
-    background-size: contain;
+    background: url(/static/img/Okee_Jungle_51.jpg) no-repeat center fixed;
+    background-size: cover;
+    background-position: top;
     background-color: #4cccf0;
-}
-.login_container{
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
 }
 .welcome_title{
     display: flex;
     flex-direction: column;
+    padding: 30px;
+    width: 100%;
+    background: url(/static/img/okee_background.jpg) no-repeat center top;
+    background-size: cover;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+.welcome_title p{
+    display: flex;
     align-items: center;
-    padding: 20px;
+    font-weight: 900;
+    justify-content: center;
+    width: 100%;
+}
+#Okee_img{
+    border-radius: 50%;
+    width: auto;
+}
+.login_container{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5px;
+}
+.header_container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 5px;
 }
 #login_reg_form{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    width: 80%;
+    width: 100%;
+    background-color: rgb(90, 214, 255);
+    border-radius: 10%;
+    padding: 5px;
+    margin: 5px;
 }
 #login_reg_form label{
-    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 #login_reg_form span{
-    padding: 10px;
+    font-size: larger;
+    padding: 5px;
 }
 #login_reg_form input{
-    padding: 10px;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    /* width: 80%; */
+    border-radius: 40%;
+}
+#submit{
+    width: 50%;
+}
+.foot_container{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(56, 185, 228);
+    font-weight: 900;
+    text-align: center;
+    background: url(/static/img/Okee_passes.jpg) no-repeat center;
+    background-size: cover;
+}
+.nav{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.left-nav{
+    display: flex;
+    flex-direction: row;
+    
+}
+.right-nav{
+    display: flex;
+    flex-direction: row;
+}
+.center-nav{
+    display: flex;
+    flex-direction: row;
 }

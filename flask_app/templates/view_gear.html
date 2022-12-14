@@ -13,18 +13,29 @@
             {% block menu %} {% include 'logged_in_menu.html' %} {% endblock menu %}
         </nav>
     </header>
-    <div class="gear-container">
-        
-                <h3>{{tool.name}}</h3>
-                <h3>{{tool.quantity}}</h3>
-                <h3>{{tool.description}}</h3>
-                
-                {% if tool.owner == logged_in_user.id %}
-                    <a href="/gear/{{tool.id}}/delete/">
-                        <span>Delete</span>
-                    </a>
-                {% endif %}
-        
-    </div>
+    <main>
+        <div class="gear-container">
+            
+                    <h3>{{tool.name}}</h3>
+                    <h3>{{tool.quantity}}</h3>
+                    <h3>{{tool.description}}</h3>
+                    
+                    {% if tool.owner == logged_in_user.id %}
+                        <a href="/gear/{{tool.id}}/delete/">
+                            <span>Delete</span>
+                        </a>
+                    {% endif %}
+            
+        </div>
+    </main>
+    <footer>
+        <foot>
+            <div class="foot_container">
+                <p>Countdown to Okee</p>
+                <p id="countdown"></p>
+            </div>
+        </foot>
+    </footer>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js')}}"></script>
 </body>
 </html>

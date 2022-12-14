@@ -15,39 +15,49 @@
             {% block menu %} {% include 'menu.html' %} {% endblock menu %}
         </nav>
     </header>
+    <main>
+        <div class="login_container">
+            <form action="/register/" method="post" id="login_reg_form">
 
-    <div id="login_container">
-        <form action="/register/" method="post" id="login_reg_form">
-            {% with messages = get_flashed_messages() %}
-                {% if messages %}
-                    <strong class="error-par">Hold Up, Chum</strong>
-                    {% for message in messages %}
-                        <p id="error-info">{{message}}</p>
-                    {% endfor %}
-                {% endif %}
-            {% endwith %}
-            
-            <label>
-                <span>Username:</span>
-                <input type="text" name="username" id="username">
-            </label>
-            <label>
-                <span>Email:</span>
-                <input type="email" name="email" id="email">
-            </label>
-            <label>
-                <span>Password:</span>
-                <input type="password" name="password" id="password">
-            </label>
-            <label>
-                <span>Confirm Password:</span>
-                <input type="password" name="confirm_password" id="confirm_password">
-            </label>
-            <input type="submit" value="Register" id="submit">
-            
-        </form>
-
-    </div>
-
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        <strong class="error-par">One Moment, I think ther was an Error</strong>
+                        {% for message in messages %}
+                            <p id="error-info">{{message}}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                
+                <label>
+                    <span>Username:</span>
+                    <input type="text" name="username" id="username">
+                </label>
+                <label>
+                    <span>Email:</span>
+                    <input type="email" name="email" id="email">
+                </label>
+                <label>
+                    <span>Password:</span>
+                    <input type="password" name="password" id="password">
+                </label>
+                <label>
+                    <span>Confirm Password:</span>
+                    <input type="password" name="confirm_password" id="confirm_password">
+                </label>
+                <input type="submit" value="Register" id="submit">
+                
+            </form>
+    
+        </div>
+    </main>
+    <footer>
+        <foot>
+            <div class="foot_container">
+                <p>Countdown to Okee</p>
+                <p id="countdown"></p>
+            </div>
+        </foot>
+    </footer>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js')}}"></script>
 </body>
 </html>

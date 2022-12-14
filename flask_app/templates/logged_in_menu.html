@@ -2,33 +2,35 @@
 <html lang="en">
 <body>
     {% block menu %}
-        <div class="left-nav">
-            <div class="w3-dropdown-hover">
-                <button class="w3-button w3-black">Cars</button>
-                <div class="w3-dropdown-content w3-bar-block w3-border">
-                    <a href="/all_cars/" class="w3-bar-item w3-button">All Cars</a>
-                    <a href="/create/car/" class="w3-bar-item w3-button">Register as a Driver</a>
+        <div class="nav">
+            <div class="left-nav">
+                <div class="w3-dropdown-hover">
+                    <button class="w3-button w3-black">Cars</button>
+                    <div class="w3-dropdown-content w3-bar-block w3-border">
+                        <a href="/all_cars/" class="w3-bar-item w3-button">All Cars</a>
+                        <a href="/create/car/" class="w3-bar-item w3-button">Register as a Driver</a>
+                    </div>
+                </div>
+                <div class="w3-dropdown-hover">
+                    <button class="w3-button w3-black">Supplies</button>
+                    <div class="w3-dropdown-content w3-bar-block w3-border">
+                        <a href="/all_gear/" class="w3-bar-item w3-button">All Gear</a>
+                        <a href="" class="w3-bar-item w3-button">Your Gear</a>
+                        <a href="/create/gear/" class="w3-bar-item w3-button">Register Gear</a>
+                    </div>
                 </div>
             </div>
-            <div class="w3-dropdown-hover">
-                <button class="w3-button w3-black">Supplies</button>
-                <div class="w3-dropdown-content w3-bar-block w3-border">
-                    <a href="/all_gear/" class="w3-bar-item w3-button">All Gear</a>
-                    <a href="" class="w3-bar-item w3-button">Your Gear</a>
-                    <a href="/create/gear/" class="w3-bar-item w3-button">Register Gear</a>
-                </div>
+            <div class="center-nav">
+                <a href="/dashboard/" class="w3-bar-item w3-button w3-black">Home</a>
             </div>
-        </div>
-        <div class="center-nav">
-            <a href="/dashboard/" class="w3-bar-item w3-button w3-black">Home</a>
-        </div>
-        <div class="right-nav">
-            <a href="https://open.spotify.com/playlist/0LbeEDGrGizvgHYW9wD9e2?si=82b8bb5b4b644817" class="w3-bar-item w3-button w3-black">
-                <span>Playlist</span>
-            </a>
-            <a href="/logout/" class="w3-bar-item w3-button w3-black">
-                <span>Logout</span>
-            </a>
+            <div class="right-nav">
+                <a href="https://open.spotify.com/playlist/0LbeEDGrGizvgHYW9wD9e2?si=82b8bb5b4b644817" class="w3-bar-item w3-button w3-black">
+                    <span>&#9836;</span>
+                </a>
+                <a href="/logout/" class="w3-bar-item w3-button w3-black">
+                    <span>Logout</span>
+                </a>
+            </div>
         </div>
     {% endblock menu %}
 </body>

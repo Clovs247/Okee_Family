@@ -13,18 +13,29 @@
             {% block menu %} {% include 'logged_in_menu.html' %} {% endblock menu %}
         </nav>
     </header>
-    <div class="all-gear-container">
-        {% for gear in all_gear %}
-            <div>
-                <a href="/gear/{{gear.id}}/view/">
-                    <h3>{{gear.name}}</h3>
-                </a>
-                <h5>Being brought by: {{gear.username}}</h5>
-                <h5>{{gear.quantity}}</h5>
-                <h5>{{gear.description}}</h5>
-                
+    <main>
+        <div class="all-gear-container">
+            {% for gear in all_gear %}
+                <div>
+                    <a href="/gear/{{gear.id}}/view/">
+                        <h3>{{gear.name}}</h3>
+                    </a>
+                    <h5>Being brought by: {{gear.username}}</h5>
+                    <h5>{{gear.quantity}}</h5>
+                    <h5>{{gear.description}}</h5>
+                    
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+    <footer>
+        <foot>
+            <div class="foot_container">
+                <p>Countdown to Okee</p>
+                <p id="countdown"></p>
             </div>
-        {% endfor %}
-    </div>
+        </foot>
+    </footer>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js')}}"></script>
 </body>
 </html>
