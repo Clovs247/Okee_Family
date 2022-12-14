@@ -19,8 +19,8 @@
                 <h3>{{tool.quantity}}</h3>
                 <h3>{{tool.description}}</h3>
                 
-                {% if tool.username == logged_in_user.username %}
-                    <a href="">
+                {% if tool.owner == logged_in_user.id %}
+                    <a href="/gear/{{tool.id}}/delete/">
                         <span>Delete</span>
                     </a>
                 {% endif %}

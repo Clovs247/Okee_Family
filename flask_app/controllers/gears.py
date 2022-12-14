@@ -39,7 +39,7 @@ def form_gear():
         flash('Please enter in Valid Info.')
         return redirect('/create/gear/')
     else:
-        print("########################", gear_data)
+        # print("########################", gear_data)
         gear.Gear.create_gear(gear_data)
         return redirect('/all_gear/')
     
@@ -56,5 +56,13 @@ def view_gear(gear_id):
         }
         logged_in_user=user.User.get_user_by_id(data)
         tool = gear.Gear.get_gear_with_user(gear_data)
-        print("############################", tool)
+        # print("############################", tool)
         return render_template('view_gear.html', logged_in_user=logged_in_user, tool=tool)
+    
+@app.route('/gear/<int:gear_id>/delete/')
+def delete_gear(gear_id):
+    gear_data={
+        'id':gear_id
+    }
+    gear.Gear.delete_gear(gear_data)
+    return redirect('/all_gear/')

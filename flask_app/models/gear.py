@@ -63,7 +63,9 @@ class Gear:
         ;"""
         results = connectToMySQL(cls.db).query_db(query, data)
         # print("##########################", results)
-        return results
+        if len(results)<1:
+            return False
+        return cls(results[0])
 
 
 # &&&&&&&&&&&&&&&&&&&&&&&&&&&&&& Update &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&

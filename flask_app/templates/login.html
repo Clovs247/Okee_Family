@@ -16,8 +16,10 @@
         </nav>
     </header>
 
-    <div  id="login_container">
+    <div class="login_container">
+
         <form action="/login/" method="post" id="login_reg_form">
+
             {% with messages = get_flashed_messages() %}
                 {% if messages %}
                     <strong class="error-par">One Moment,I think there was an Error</strong>
@@ -26,6 +28,7 @@
                     {% endfor %}
                 {% endif %}
             {% endwith %}
+
                 <label>
                     <span>Email:</span>
                     <input type="email" name="email">

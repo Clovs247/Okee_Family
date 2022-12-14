@@ -1,17 +1,15 @@
 body{
-    margin:20px;
-    width: auto;
-    height: 100%;
+    margin:50px;
 }
 .login_background{
-    background-image: url(/static/img/okeechobee_header.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: url(/static/img/okeechobee_header.jpg) no-repeat center fixed;
+    background-size: contain;
     background-color: #4cccf0;
 }
 .login_container{
     display: flex;
     justify-content: space-evenly;
+    width: 100%;
 }
 .welcome_title{
     display: flex;
@@ -24,6 +22,7 @@ body{
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    width: 80%;
 }
 #login_reg_form label{
     padding: 10px;

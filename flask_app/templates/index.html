@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="login_background">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <title>Index</title>
 </head>
-<body >
+<body class="login_background">
     <header>
         <nav>
             {% block menu %} {% include 'menu.html' %} {% endblock menu %}
@@ -17,6 +17,7 @@
     <main>
         <div class="welcome_title">
             <h1>Welcome</h1>
+            <p>To the Family</p>
         </div>
     </main>
 
