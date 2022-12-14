@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <title>All Cars</title>
 </head>
 <body>
@@ -13,24 +14,44 @@
             {% block menu %} {% include 'logged_in_menu.html' %} {% endblock menu %}
         </nav>
     </header>
-    <div class="all-car-container">
-        {% for car in all_cars %}
-            <div>
-                <h3>{{car.car_name}}</h3>
-                <h3>{{car.car_capacity}}</h3>
-                {% for passenger in car.passengers %}
-                    <p>{{passenger.username}}</p>
+    <main>
+        <div class="all-car-container">
+            <table>
+                <tr>
+                    <th class="car-table-header">Car Name/Type</th>
+                    <th class="car-table-header">Car's Capacity</th>
+                    <th class="car-table-header">Car's Occupants</th>
+    
+                </tr>
+                {% for car in all_cars %}
+                    <tr class="car-table-row">
+                        <td class="car-table-info">
+                            <a href="/car/{{car.id}}/view/">
+                                <span>{{car.car_name}}</span>
+                            </a>
+                        </td>
+                        <td class="car-table-info">
+                            <p>{{car.car_capacity}}</p>
+                        </td>
+                        <td class="car-table-info">
+                            {% for passenger in car.passengers %}
+                                <p>{{passenger.username}}</p>
+                            {% endfor %}
+                        </td>
+                        
+                    </tr>
                 {% endfor %}
-                <a href="/car/{{car.id}}/view/">
-                    <span>View</span>
-                </a>
-                {% if logged_in_user.id == car.driver %}
-                    <a href="/car/{{car.id}}/delete/">
-                        <span>Delete</span>
-                    </a>
-                {% endif %}
+            </table>
+        </div>
+    </main>
+    <footer>
+        <foot>
+            <div class="foot_container">
+                <p>Countdown to Okee</p>
+                <p id="countdown"></p>
             </div>
-        {% endfor %}
-    </div>
+        </foot>
+    </footer>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js')}}"></script>
 </body>
 </html>

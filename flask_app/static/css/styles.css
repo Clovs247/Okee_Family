@@ -1,5 +1,5 @@
 body{
-    margin:0px;
+    margin:5px;
 }
 .login_background{
     background: url(/static/img/Okee_Jungle_51.jpg) no-repeat center fixed;
@@ -76,7 +76,7 @@ body{
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgb(56, 185, 228);
+    background-color: rgb(90, 214, 255);
     font-weight: 900;
     text-align: center;
     background: url(/static/img/Okee_passes.jpg) no-repeat center;
@@ -100,4 +100,81 @@ body{
 .center-nav{
     display: flex;
     flex-direction: row;
+}
+.dashboard-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#lineup{
+    width: 100%;
+}
+.car-form-container{
+    /* display: flex; */
+    margin-top: 20px;
+    /* margin: 5px; */
+}
+#car_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(90, 214, 255);
+    border-radius: 10%;
+    padding: 10px;
+    margin: 5px;
+}
+.car-name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+}
+.car_capacity{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+}
+#car-submit{
+    padding: 5px;
+    border-radius: 25%;
+}
+.all-car-container{
+    background-color: rgb(90, 214, 255);
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+}
+.car-table-header{
+    background-color: rgb(255, 252, 90);
+    border-radius: 15%;
+}
+.car-table-info{
+    margin: 10px;
+    background-color: rgb(194, 193, 121);
+    border-radius: 15%;
+}
+.view-car-container{
+    background-color: rgb(90, 214, 255);
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+}
+.view-car-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.car-view-forms{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25%;
+    background-color: rgb(113, 108, 105);
+    width: 75%;
 }

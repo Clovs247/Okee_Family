@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <title>Car Form</title>
 </head>
 <body>
@@ -13,30 +14,41 @@
             {% block menu %} {% include 'logged_in_menu.html' %} {% endblock menu %}
         </nav>
     </header>
-    <div class="car-form-container">
-        <form action="/create/car/form/" method="post" id="car_form">
-            
-            {% with messages = get_flashed_messages() %}
-                {% if messages %}
-                    <strong class="error-par">Hold Up, Chum</strong>
-                    {% for message in messages %}
-                        <p id="error-info">{{message}}</p>
-                    {% endfor %}
-                {% endif %}
-            {% endwith %}
-            
-            <label>
-                Car Type/Name:
-                <input type="text" name="car_name" id="car_name">
-            </label>
-            <label>
-                Car Capacity(Including the driver):
-                <input type="number" name="car_capacity" id="car_capacity" min="2" max="10">
-            </label>
-
-            <input type="submit" value="Register" id="submit">
-            
-        </form>
-    </div>
+    <main>
+        <div class="car-form-container">
+            <form action="/create/car/form/" method="post" id="car_form">
+                
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        <strong class="error-par">Hold Up, Chum</strong>
+                        {% for message in messages %}
+                            <p id="error-info">{{message}}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                
+                <label class="car-name">
+                    <span>Car Type/Name:</span>
+                    <input type="text" name="car_name" id="car_name">
+                </label>
+                <label class="car_capacity">
+                    <span>Car Capacity(Including the driver):</span>
+                    <input type="number" name="car_capacity" id="car_capacity" min="2" max="10" value="0">
+                </label>
+    
+                <input type="submit" value="Register" id="car-submit">
+                
+            </form>
+        </div>
+    </main>
+    <footer>
+        <foot>
+            <div class="foot_container">
+                <p>Countdown to Okee</p>
+                <p id="countdown"></p>
+            </div>
+        </foot>
+    </footer>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js')}}"></script>
 </body>
 </html>
