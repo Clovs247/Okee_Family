@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <title>View Gear</title>
 </head>
 <body>
@@ -14,18 +15,20 @@
         </nav>
     </header>
     <main>
-        <div class="gear-container">
-            
-                    <h3>{{tool.name}}</h3>
-                    <h3>{{tool.quantity}}</h3>
-                    <h3>{{tool.description}}</h3>
-                    
-                    {% if tool.owner == logged_in_user.id %}
-                        <a href="/gear/{{tool.id}}/delete/">
-                            <span>Delete</span>
-                        </a>
-                    {% endif %}
-            
+        <div class="view-gear-container">
+            <div class="view-gear-top">
+                <h1>{{tool.name}}</h1>
+                <p>{{tool.description}}</p>
+                <p>{{tool.quantity}}</p>
+            </div>
+            <div class="gear-view-forms">
+                
+                {% if tool.owner == logged_in_user.id %}
+                    <a href="/gear/{{tool.id}}/delete/">
+                        <span>Delete</span>
+                    </a>
+                {% endif %}
+            </div>
         </div>
     </main>
     <footer>

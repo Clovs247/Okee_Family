@@ -81,6 +81,7 @@ body{
     text-align: center;
     background: url(/static/img/Okee_passes.jpg) no-repeat center;
     background-size: cover;
+    border-top: 2px solid black;
 }
 .nav{
     display: flex;
@@ -111,9 +112,7 @@ body{
     width: 100%;
 }
 .car-form-container{
-    /* display: flex; */
     margin-top: 20px;
-    /* margin: 5px; */
 }
 #car_form{
     display: flex;
@@ -130,11 +129,17 @@ body{
     align-items: center;
     padding: 5px;
 }
+#car-name{
+    text-align: center;
+}
 .car_capacity{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 5px;
+}
+#car_capacity{
+    text-align: center;
 }
 #car-submit{
     padding: 5px;
@@ -145,6 +150,8 @@ body{
     border-radius: 10%;
     display: flex;
     justify-content: center;
+    padding: 10px;
+    margin: 10px;
 }
 .car-table-header{
     background-color: rgb(255, 252, 90);
@@ -177,4 +184,90 @@ body{
     border-radius: 25%;
     background-color: rgb(113, 108, 105);
     width: 75%;
+}
+.all-gear-container{
+    background-color: rgb(90, 214, 255);
+    border-radius: 15%;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+.gear-table-header{
+    background-color: rgb(255, 252, 90);
+    border-radius: 15%;
+}
+.gear-table-info{
+    margin: 10px;
+    background-color: rgb(194, 193, 121);
+    border-radius: 15%;
+}
+.view-gear-container{
+    background-color: rgb(90, 214, 255);
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+}
+.view-gear-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.gear-view-forms{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25%;
+    background-color: rgb(113, 108, 105);
+    width: 75%;
+    padding: 5px;
+}
+.gear-form-container{
+    margin-top: 20px;
+}
+#gear_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(90, 214, 255);
+    border-radius: 10%;
+    padding: 10px;
+    margin: 5px;
+}
+.gear_name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    text-align: center;
+}
+#gear_name{
+    text-align: center;
+}
+.gear_quantity{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    text-align: center;
+}
+#gear_quantity{
+    text-align: center;
+}
+.gear_description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;text-align: center;
+}
+#gear_description{
+    text-align: center;
+}
+#gear-submit{
+    padding: 5px;
+    border-radius: 25%;
 }

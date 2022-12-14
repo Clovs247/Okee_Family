@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <title>Create Gear</title>
 </head>
 <body>
@@ -13,35 +14,45 @@
             {% block menu %} {% include 'logged_in_menu.html' %} {% endblock menu %}
         </nav>
     </header>
+    <main>
+        <div class="gear-form-container">
+            <form action="/create/gear/form/" method="post" id="gear_form">
+                
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        <strong class="error-par">Hold Up, Chum</strong>
+                        {% for message in messages %}
+                            <p id="error-info">{{message}}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                
+                <label class="gear_name">
+                    <span>Name of Item:</span>
+                    <input type="text" name="name" id="gear_name">
+                </label>
+                <label class="gear_quantity">
+                    <span>Quantity of Item(s):</span>
+                    <input type="number" name="quantity" id="gear_quantity">
+                </label>
+                <label class="gear_description">
+                    <span>Description:</span>
+                    <input type="textarea" name="description" id="gear_description">
+                </label>
     
-    <div class="gear-form-container">
-        <form action="/create/gear/form/" method="post" id="gear_form">
-            
-            {% with messages = get_flashed_messages() %}
-                {% if messages %}
-                    <strong class="error-par">Hold Up, Chum</strong>
-                    {% for message in messages %}
-                        <p id="error-info">{{message}}</p>
-                    {% endfor %}
-                {% endif %}
-            {% endwith %}
-            
-            <label>
-                Name of Item:
-                <input type="text" name="name" id="gear_name">
-            </label>
-            <label>
-                Quantity of Item(s):
-                <input type="number" name="quantity" id="gear_quantity">
-            </label>
-            <label>
-                Description:
-                <input type="textarea" name="description" id="gear_description">
-            </label>
-
-            <input type="submit" value="Register" id="submit">
-            
-        </form>
-    </div>
+                <input type="submit" value="Register" id="gear-submit">
+                
+            </form>
+        </div>
+    </main>
+    <footer>
+        <foot>
+            <div class="foot_container">
+                <p>Countdown to Okee</p>
+                <p id="countdown"></p>
+            </div>
+        </foot>
+    </footer>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js')}}"></script>
 </body>
 </html>

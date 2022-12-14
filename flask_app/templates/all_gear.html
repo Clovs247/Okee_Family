@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <title>All Gear</title>
 </head>
 <body>
@@ -15,17 +16,28 @@
     </header>
     <main>
         <div class="all-gear-container">
-            {% for gear in all_gear %}
-                <div>
-                    <a href="/gear/{{gear.id}}/view/">
-                        <h3>{{gear.name}}</h3>
-                    </a>
-                    <h5>Being brought by: {{gear.username}}</h5>
-                    <h5>{{gear.quantity}}</h5>
-                    <h5>{{gear.description}}</h5>
-                    
-                </div>
-            {% endfor %}
+            <table>
+                <tr>
+                    <th class="gear-table-header">Gear Name:</th>
+                    <th class="gear-table-header">Brought By:</th>
+                    <th class="gear-table-header">Quantity:</th>
+                </tr>
+                {% for gear in all_gear %}
+                    <tr>
+                        <td class="gear-table-info">
+                            <a href="/gear/{{gear.id}}/view/">
+                                <p>{{gear.name}}</p>
+                            </a>
+                        </td>
+                        <td class="gear-table-info">
+                            <p>{{gear.username}}</p>
+                        </td>
+                        <td class="gear-table-info">
+                            <p>{{gear.quantity}}</p>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
         </div>
     </main>
     <footer>
