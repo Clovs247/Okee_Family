@@ -59,6 +59,22 @@ def view_gear(gear_id):
         # print("############################", tool)
         return render_template('view_gear.html', logged_in_user=logged_in_user, tool=tool)
     
+@app.route('/gear/<int:owner_id>/viewall/')
+def view_gear_by_owner(owner_id):
+    if 'user_id' not in session:
+        return redirect('/')
+    else:
+        data={
+            'id': session['user_id']
+        }
+        owner_data={
+            'id':owner_id
+        }
+        logged_in_user=user.User.get_user_by_id(data)
+        tools = gear.Gear.get_gear_by_user(owner_data)
+        # print("############################", tool)
+        return render_template('view_owner_gear.html', logged_in_user=logged_in_user, tools=tools)
+    
 @app.route('/gear/<int:gear_id>/delete/')
 def delete_gear(gear_id):
     gear_data={

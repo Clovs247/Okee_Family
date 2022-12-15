@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>View Gear</title>
+</head>
+<body>
+    <header>
+        <nav>
+            {% block menu %} {% include 'logged_in_menu.html' %} {% endblock menu %}
+        </nav>
+    </header>
+    <main>
+
+        <div class="all-gear-container">
+            <table>
+                <tr>
+                    <th class="gear-table-header">Gear Name:</th>
+                    <th class="gear-table-header">Quantity:</th>
+                    <th class="gear-table-header">Description:</th>
+                </tr>
+                {% for tool in tools %}
+                    <tr>
+                        <td class="gear-table-info">
+                            <a href="/gear/{{tool.id}}/view/">
+                                <p>{{tool.name}}</p>
+                            </a>
+                        </td>
+                        <td class="gear-table-info">
+                            <p>{{tool.quantity}}</p>
+                        </td>
+                        <td class="gear-table-info">
+                            <p>{{tool.description}}</p>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+    </main>
+    <footer>
+        <foot>
+            <div class="foot_container">
+                <p>Countdown to Okee</p>
+                <p id="countdown"></p>
+            </div>
+        </foot>
+    </footer>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js')}}"></script>
+</body>
+</html>

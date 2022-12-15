@@ -67,6 +67,18 @@ class Gear:
             return False
         return cls(results[0])
 
+    @classmethod
+    def get_gear_by_user(cls, data):
+        query="""
+        SELECT * FROM gear
+        LEFT JOIN user
+        ON gear.owner = user.id
+        WHERE gear.owner = %(id)s
+        ;"""
+        results = connectToMySQL(cls.db).query_db(query, data)
+        # print("##########################", results)
+        return results
+
 
 # &&&&&&&&&&&&&&&&&&&&&&&&&&&&&& Update &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
