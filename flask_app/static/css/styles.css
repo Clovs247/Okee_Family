@@ -271,3 +271,17 @@ body{
     padding: 5px;
     border-radius: 25%;
 }
+.small-band{
+    width: 50%;
+}
+#small-band{
+    display: flex;
+    padding: 20px;
+}
+#cool-guy{
+    width: 60%;
+}
+#cool-guy-div{
+    display: flex;
+    justify-content: center;
+}
