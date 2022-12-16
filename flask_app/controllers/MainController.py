@@ -18,6 +18,17 @@ def dashboard():
         all_users = user.User.get_all_users()
         return render_template('dashboard.html', logged_in_user=logged_in_user)
     
+@app.route('/lineup/')
+def dashboard():
+    if 'user_id' not in session:
+        return redirect('/')
+    else:
+        data={
+            'id' : session['user_id']
+        }
+        logged_in_user = user.User.get_user_by_id(data)
+        return render_template('lineup.html', logged_in_user=logged_in_user)
+    
 @app.route('/logout/')
 def logout():
     session.clear()

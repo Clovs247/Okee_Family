@@ -121,6 +121,11 @@ nav{
     justify-content: center;
     align-items: center;
 }
+#avatar{
+    width: 80%;
+    opacity:.9;
+    border-radius: 50%;
+}
 #lineup{
     width: 80%;
     opacity:.9;
