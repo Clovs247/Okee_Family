@@ -1,11 +1,28 @@
 body{
     margin:5px;
 }
-
 .login_background{
     background: url(/static/img/Okee_Jungle_51.jpg) no-repeat center fixed;
     background-size: cover;
     background-position: top;
+    background-color: #4cccf0;
+}
+.car-background{
+    background: url(/static/img/OMF-Camping.jpg) no-repeat center fixed;
+    background-size: cover;
+    background-position: top;
+    background-color: #4cccf0;
+}
+/* .dash-background{
+    background: url(/static/img/Okee_site_photo.png) no-repeat center fixed;
+    background-size: cover;
+    background-position: top;
+    background-color: #4cccf0;
+} */
+.gear-background{
+    background: url(/static/img/OMF18-LAKE.jpg) no-repeat right fixed;
+    background-size: cover;
+    
     background-color: #4cccf0;
 }
 .welcome_title{
@@ -149,6 +166,9 @@ nav{
     border-radius: 10%;
     padding: 10px;
     margin: 5px;
+    font-size: large;
+    background: url(/static/img/okee_background.jpg) no-repeat center;
+    background-size: cover;
 }
 .car-name{
     display: flex;
@@ -179,6 +199,8 @@ nav{
     justify-content: center;
     padding: 10px;
     margin: 10px;
+    background: url(/static/img/okee_background.jpg) no-repeat center;
+    background-size: cover;
 }
 .car-table-header{
     background-color: rgb(255, 252, 90);
@@ -213,12 +235,14 @@ nav{
     width: 75%;
 }
 .all-gear-container{
-    background-color: rgb(90, 214, 255);
     border-radius: 15%;
     padding: 10px;
     margin: 10px;
     display: flex;
     justify-content: center;
+    background: url(/static/img/okee_background.jpg) no-repeat center;
+    background-size: cover;
+    background-color: rgb(90, 214, 255);
 }
 .gear-table-header{
     background-color: rgb(255, 252, 90);
@@ -255,6 +279,7 @@ nav{
 }
 .gear-form-container{
     margin-top: 20px;
+    
 }
 #gear_form{
     display: flex;
@@ -264,6 +289,9 @@ nav{
     border-radius: 10%;
     padding: 10px;
     margin: 5px;
+    font-size: large;
+    background: url(/static/img/okee_background.jpg) no-repeat center ;
+    background-size: cover;
 }
 .gear_name{
     display: flex;
