@@ -129,7 +129,14 @@ nav{
 #lineup{
     width: 80%;
     opacity:.9;
-    border-radius: 50%;
+    
+    margin-top: 15px;
+}
+#campground{
+    width: 80%;
+    opacity:.9;
+    border-radius: 20%;
+    margin-top: 15px;
 }
 .car-form-container{
     margin-top: 20px;

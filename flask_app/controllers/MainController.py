@@ -19,7 +19,7 @@ def dashboard():
         return render_template('dashboard.html', logged_in_user=logged_in_user)
     
 @app.route('/lineup/')
-def dashboard():
+def lineup():
     if 'user_id' not in session:
         return redirect('/')
     else:
@@ -30,7 +30,7 @@ def dashboard():
         return render_template('lineup.html', logged_in_user=logged_in_user)
     
 @app.route('/campground/')
-def dashboard():
+def campground():
     if 'user_id' not in session:
         return redirect('/')
     else:
