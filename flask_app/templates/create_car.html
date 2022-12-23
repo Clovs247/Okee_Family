@@ -19,14 +19,19 @@
         <div class="car-form-container">
             <form action="/create/car/form/" method="post" id="car_form">
                 
-                {% with messages = get_flashed_messages() %}
-                    {% if messages %}
-                        <strong class="error-par">Hold Up, Chum</strong>
-                        {% for message in messages %}
-                            <p id="error-info">{{message}}</p>
-                        {% endfor %}
-                    {% endif %}
-                {% endwith %}
+                <div class="error-container">
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                        <div class="error-back">
+                            <p class="error-par">One Moment, I think there was an Error</p>
+                            {% for message in messages %}
+                                <p class="error-info">{{message}}</p>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    {% endwith %}
+                </div>
                 
                 <label class="car-name">
                     <span>Car Type/Name:</span>
