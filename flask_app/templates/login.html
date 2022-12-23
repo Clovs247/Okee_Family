@@ -20,16 +20,21 @@
         <div class="login_container">
     
             <form action="/login/" method="post" id="login_reg_form">
-    
-                {% with messages = get_flashed_messages() %}
-                    {% if messages %}
-                        <strong class="error-par">One Moment,I think there was an Error</strong>
-                        {% for message in messages %}
-                            <p id="error-info">{{message}}</p>
-                        {% endfor %}
-                    {% endif %}
-                {% endwith %}
                 <h1>Login Form</h1>
+                <div class="error-container">
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                        <div class="error-back">
+                            <p class="error-par">One Moment, I think there was an Error</p>
+                            {% for message in messages %}
+                                <p class="error-info">{{message}}</p>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    {% endwith %}
+                </div>
+                
                     <label>
                         <span>Email:</span>
                         <input type="email" name="email">

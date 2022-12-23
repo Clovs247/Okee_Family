@@ -30,6 +30,42 @@ nav{
 }
 
 
+/* &&&&&&&&&&&&&&&&&&&&&&&& FormErrors &&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+.error-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 35%;
+    background-color: #69ddfd;
+}
+.closebtn{
+    float: right;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.closebtn:hover{
+    color: black;
+}
+.error-back{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(234, 107, 16);
+    padding: 10px;
+    border-radius: 20%;
+}
+.error-par{
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+}
+.error-info{
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+}
+
 /* &&&&&&&&&&&&&&&&&&&&&&&& Index/Login &&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 .login_link{
     display: flex;
@@ -52,7 +88,7 @@ nav{
     margin: 5vw;
     width: auto;
     background: url(/static/img/okee_background.jpg)  center top;
-    border-radius: 50%;
+    border-radius: 40%;
     text-align: center;
 }
 .welcome_title p{
@@ -60,6 +96,8 @@ nav{
     align-items: center;
     justify-content: center;
     font-size: 3vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 34%;
 }
 .login_container{
     display: flex;
@@ -82,6 +120,8 @@ nav{
 }
 #login_reg_form h1{
     font-size: 4vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 34%;
 }
 #login_reg_form label{
     display: flex;
@@ -101,6 +141,7 @@ nav{
 }
 #submit{
     padding: 1vh;
+    cursor: pointer;
 }
 #Okee_img{
     border-radius: 50%;
