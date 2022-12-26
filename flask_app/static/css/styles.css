@@ -107,11 +107,11 @@ nav{
     text-align: center;
     border: 2px solid black;
 }
-.welcome_title p{
+.welcome_title h1{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3vh;
+    font-size: 5vh;
     background-color: rgb(255, 255, 255);
     border-radius: 34%;
     border: 2px solid black;
@@ -133,7 +133,7 @@ nav{
     align-items: center;
     width: auto;
     border-radius: 10%;
-    padding: 7vh;
+    padding: 7vw;
     padding-top: 0px;
     margin: 5vw;
     margin-top: 0px;
@@ -146,7 +146,8 @@ nav{
 #login_reg_form h1{
     font-size: 4vh;
     padding: 5px;
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
+    background-color: #e2a5f5;
     border-radius: 34%;
     align-items: center;
     display:flex;
@@ -158,9 +159,9 @@ nav{
     align-items: center;
 }
 #login_reg_form span{
-    padding: 1vh;
+    padding: 10px;
     background-color: rgb(255, 255, 255);
-    border-radius: 15%;
+    border-radius: 20%;
 }
 #login_reg_form input{
     display: flex;
@@ -377,20 +378,9 @@ nav{
     background-color: rgb(113, 108, 105);
     width: 75%;
 }
-/* &&&&&&&&&&&&&&&&&&&&&&&& UnRegistered &&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 
+/* &&&&&&&&&&&&&&&&&&&&&&&& DashBoard &&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 
-.dashboard-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-#avatar{
-    width: 80%;
-    opacity:.9;
-    border-radius: 50%;
-}
 #lineup{
     width: 100%;
     opacity:.9;
@@ -403,6 +393,44 @@ nav{
     border-radius: 20%;
     margin-top: 15px;
 }
+.dashboard-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.dashboard-container h1{
+    margin-bottom: 0px;
+    font-size: 5vh;
+    padding: 5px;
+    background-color: #e2a5f5;
+    border-radius: 34%;
+    border: 2px solid black;
+}
+.dashboard-container h2{
+    margin: 1vw;
+    font-size: 5vh;
+    padding: 5px;
+    background-color: #e2a5f5;
+    border-radius: 34%;
+    border: 2px solid black;
+}
+.dash-background{
+    background-color: rgb(90, 214, 255);
+}
+#avatar{
+    margin: 3px;
+    border-radius: 50%;
+    width: 314px;
+    border: 2px solid black;
+    position: relative;
+}
+
+/* &&&&&&&&&&&&&&&&&&&&&&&& UnRegistered &&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+
+
+
+
 
 
 .small-band{
