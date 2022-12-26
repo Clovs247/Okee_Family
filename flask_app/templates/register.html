@@ -19,10 +19,10 @@
     <main>
         <div class="login_container">
             <form action="/register/" method="post" id="login_reg_form">
-                <h1>Register Form</h1>
-                <div class="error-container">
-                    {% with messages = get_flashed_messages() %}
-                        {% if messages %}
+                <h1>Registration</h1>
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <div class="error-container">
                         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                         <div class="error-back">
                             <p class="error-par">One Moment, I think there was an Error</p>
@@ -30,9 +30,9 @@
                                 <p class="error-info">{{message}}</p>
                             {% endfor %}
                         </div>
-                        {% endif %}
-                    {% endwith %}
-                </div>
+                    </div>
+                {% endif %}
+                {% endwith %}
                 <label>
                     <span>Username:</span>
                     <input type="text" name="username" id="username">

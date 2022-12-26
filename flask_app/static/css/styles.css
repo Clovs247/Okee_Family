@@ -29,7 +29,19 @@ nav{
     background-size: cover;
     border-top: 2px solid black;
 }
-
+.left-nav{
+    display: flex;
+    flex-direction: row;
+    
+}
+.right-nav{
+    display: flex;
+    flex-direction: row;
+}
+.center-nav{
+    display: flex;
+    flex-direction: row;
+}
 
 /* &&&&&&&&&&&&&&&&&&&&&&&& FormErrors &&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 .error-container{
@@ -70,13 +82,14 @@ nav{
 /* &&&&&&&&&&&&&&&&&&&&&&&& Index/Login &&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 .login_link{
     display: flex;
-    box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
+    background-color: black;
 }
 .login_background{
-    background: url(/static/img/Okee_Jungle_51.jpg) no-repeat center fixed;
+    /* background: url(/static/img/Okee_Jungle_51.jpg) no-repeat center fixed;
     background-size: cover;
-    background-position: top;
-    background-color: #4cccf0;
+    background-position: top; */
+    /* background-color: #47c5e8; */
+    background-color: #e2a5f5;
 }
 .welcome-div{
     display: flex;
@@ -85,12 +98,14 @@ nav{
 .welcome_title{
     display: flex;
     flex-direction: column;
-    padding: 5vw;
-    margin: 5vw;
+    padding: 4vw;
+    margin: 20px;
     width: auto;
     background: url(/static/img/okee_background.jpg)  center top;
+    background-size: cover;
     border-radius: 40%;
     text-align: center;
+    border: 2px solid black;
 }
 .welcome_title p{
     display: flex;
@@ -99,10 +114,16 @@ nav{
     font-size: 3vh;
     background-color: rgb(255, 255, 255);
     border-radius: 34%;
+    border: 2px solid black;
+}
+#Okee_img{
+    border-radius: 50%;
+    width: 245px;
+    border: 2px solid black;
 }
 .login_container{
     display: flex;
-    margin: 3vw;
+    margin: 10px;
     width: auto;
     justify-content: center;
 }
@@ -112,18 +133,24 @@ nav{
     align-items: center;
     width: auto;
     border-radius: 10%;
-    padding: 5vw;
+    padding: 7vh;
+    padding-top: 0px;
     margin: 5vw;
     margin-top: 0px;
     background: url(/static/img/okee_background.jpg) no-repeat center;
     background-size: cover;
     font-size: 2vh;
+    border: 2px solid black;
     box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
 }
 #login_reg_form h1{
     font-size: 4vh;
+    padding: 5px;
     background-color: rgb(255, 255, 255);
     border-radius: 34%;
+    align-items: center;
+    display:flex;
+    border: 2px solid black;
 }
 #login_reg_form label{
     display: flex;
@@ -131,26 +158,25 @@ nav{
     align-items: center;
 }
 #login_reg_form span{
-    font-size: larger;
+    padding: 1vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15%;
 }
 #login_reg_form input{
     display: flex;
     justify-content: center;
-    margin: 5px;
-    padding: 5px;
+    margin: 4px;
+    padding: 4px;
     text-align: center;
     border-radius: 23%;
-    box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
+    box-shadow: 0 7px 7px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
 }
 #submit{
-    padding: 1vh;
+    padding: 15px;
     cursor: pointer;
     box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
 }
-#Okee_img{
-    border-radius: 50%;
-    width: 245px;
-}
+
 
 /* &&&&&&&&&&&&&&&&&&&&&&&& Gear &&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 .gear-background{
@@ -211,42 +237,53 @@ nav{
     flex-direction: column;
     align-items: center;
     border-radius: 10%;
-    padding: 5vw;
+    padding: 10vw;
     margin: 5vw;
     background: url(/static/img/okee_background.jpg) no-repeat center ;
     background-size: cover;
     font-size: 2vh;
     box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
 }
-.gear_name{
+#gear_form h1{
+    font-size: 4vh;
+    padding: 1vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 34%;
+}
+#gear_form label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* .gear_name{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 5px;
     text-align: center;
-}
-#gear_name{
+} */
+/* #gear_name{
     text-align: center;
-}
-.gear_quantity{
+} */
+/* .gear_quantity{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 5px;
     text-align: center;
-}
-#gear_quantity{
+} */
+/* #gear_quantity{
     text-align: center;
-}
-.gear_description{
+} */
+/* .gear_description{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 5px;text-align: center;
-}
-#gear_description{
+} */
+/* #gear_description{
     text-align: center;
-}
+} */
 #gear-submit{
     padding: 1vh;
     cursor: pointer;
@@ -255,50 +292,11 @@ nav{
 }
 
 /* &&&&&&&&&&&&&&&&&&&&&&&& Car &&&&&&&&&&&&&&&&&&&&&&&&&&&& */
-
-
-/* &&&&&&&&&&&&&&&&&&&&&&&& UnRegistered &&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 .car-background{
     background: url(/static/img/OMF-Camping.jpg) no-repeat center fixed;
     background-size: cover;
     background-position: top;
     background-color: #4cccf0;
-}
-.left-nav{
-    display: flex;
-    flex-direction: row;
-    
-}
-.right-nav{
-    display: flex;
-    flex-direction: row;
-}
-.center-nav{
-    display: flex;
-    flex-direction: column;
-}
-.dashboard-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-#avatar{
-    width: 80%;
-    opacity:.9;
-    border-radius: 50%;
-}
-#lineup{
-    width: 100%;
-    opacity:.9;
-    
-    margin-top: 15px;
-}
-#campground{
-    width: 90%;
-    opacity:.9;
-    border-radius: 20%;
-    margin-top: 15px;
 }
 .car-form-container{
     margin-top: 20px;
@@ -379,6 +377,33 @@ nav{
     background-color: rgb(113, 108, 105);
     width: 75%;
 }
+/* &&&&&&&&&&&&&&&&&&&&&&&& UnRegistered &&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+
+
+.dashboard-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#avatar{
+    width: 80%;
+    opacity:.9;
+    border-radius: 50%;
+}
+#lineup{
+    width: 100%;
+    opacity:.9;
+    
+    margin-top: 15px;
+}
+#campground{
+    width: 90%;
+    opacity:.9;
+    border-radius: 20%;
+    margin-top: 15px;
+}
+
 
 .small-band{
     width: 50%;
