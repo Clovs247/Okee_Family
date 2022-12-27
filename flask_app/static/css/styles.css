@@ -1,3 +1,6 @@
+.w3-dropdown-hover{
+    background-color: black;
+}
 body{
     margin:3vw;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -9,9 +12,8 @@ nav{
 }
 .nav{
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
+    justify-content: space-around;
+    width: auto;
 }
 .header_container{
     display: flex;
@@ -32,7 +34,6 @@ nav{
 .left-nav{
     display: flex;
     flex-direction: row;
-    
 }
 .right-nav{
     display: flex;
@@ -41,6 +42,9 @@ nav{
 .center-nav{
     display: flex;
     flex-direction: row;
+}
+.button-background{
+    background-color: black;
 }
 
 /* &&&&&&&&&&&&&&&&&&&&&&&& FormErrors &&&&&&&&&&&&&&&&&&&&&&&&&&&& */
@@ -82,6 +86,8 @@ nav{
 /* &&&&&&&&&&&&&&&&&&&&&&&& Index/Login &&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 .login_link{
     display: flex;
+    padding: 6px;
+    border-radius: 10%;
     background-color: black;
 }
 .login_background{
@@ -231,30 +237,55 @@ nav{
 }
 .gear-form-container{
     margin-top: 20px;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #gear_form{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgb(90, 214, 255);
     border-radius: 10%;
-    padding: 10vw;
-    margin: 5vw;
-    background: url(/static/img/okee_background.jpg) no-repeat center ;
+    padding: 5vw;
+    padding-top: 0px;
+    margin: 0vw;
+    margin-top: 0px;
+    font-size: large;
+    background: url(/static/img/okee_background.jpg) no-repeat center;
     background-size: cover;
     font-size: 2vh;
+    border: 2px solid black;
     box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
 }
 #gear_form h1{
     font-size: 4vh;
-    padding: 1vh;
-    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    /* background-color: rgb(255, 255, 255); */
+    background-color: #e2a5f5;
     border-radius: 34%;
+    align-items: center;
+    display:flex;
+    border: 2px solid black;
 }
 #gear_form label{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+#gear_form span{
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20%;
+}
+#gear_form input{
+    display: flex;
+    justify-content: center;
+    margin: 4px;
+    padding: 4px;
+    text-align: center;
+    border-radius: 23%;
+    box-shadow: 0 7px 7px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
 }
 /* .gear_name{
     display: flex;
@@ -291,6 +322,13 @@ nav{
     border-radius: 25%;
     box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
 }
+.small-band{
+    width: 40%;
+}
+#small-band{
+    display: flex;
+    justify-content: center;
+}
 
 /* &&&&&&&&&&&&&&&&&&&&&&&& Car &&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 .car-background{
@@ -301,6 +339,9 @@ nav{
 }
 .car-form-container{
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #car_form{
     display: flex;
@@ -308,30 +349,71 @@ nav{
     align-items: center;
     background-color: rgb(90, 214, 255);
     border-radius: 10%;
-    padding: 10px;
-    margin: 5px;
+    padding: 5vw;
+    padding-top: 0px;
+    margin: 0vw;
+    margin-top: 0px;
     font-size: large;
     background: url(/static/img/okee_background.jpg) no-repeat center;
     background-size: cover;
+    font-size: 2vh;
+    border: 2px solid black;
+    box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
 }
-.car-name{
+#car_form h1{
+    font-size: 4vh;
+    padding: 5px;
+    /* background-color: rgb(255, 255, 255); */
+    background-color: #e2a5f5;
+    border-radius: 34%;
+    align-items: center;
+    display:flex;
+    border: 2px solid black;
+}
+#car_form label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#car_form span{
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20%;
+}
+#car_form input{
+    display: flex;
+    justify-content: center;
+    margin: 4px;
+    padding: 4px;
+    text-align: center;
+    border-radius: 23%;
+    box-shadow: 0 7px 7px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
+}
+#cool-guy{
+    width: 60%;
+}
+#cool-guy-div{
+    display: flex;
+    justify-content: center;
+}
+/* .car-name{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 5px;
-}
-#car-name{
+} */
+/* #car-name{
     text-align: center;
-}
-.car_capacity{
+} */
+/* .car_capacity{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 5px;
-}
-#car_capacity{
+} */
+/* #car_capacity{
     text-align: center;
-}
+} */
 #car-submit{
     padding: 5px;
     border-radius: 25%;
@@ -433,20 +515,8 @@ nav{
 
 
 
-.small-band{
-    width: 50%;
-}
-#small-band{
-    display: flex;
-    padding: 20px;
-}
-#cool-guy{
-    width: 60%;
-}
-#cool-guy-div{
-    display: flex;
-    justify-content: center;
-}
+
+
 .playlist-container{
     display: flex;
     flex-direction: column;
