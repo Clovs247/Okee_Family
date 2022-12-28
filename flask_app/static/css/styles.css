@@ -1,6 +1,3 @@
-.w3-dropdown-hover{
-    background-color: black;
-}
 body{
     margin:3vw;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -42,9 +39,6 @@ nav{
 .center-nav{
     display: flex;
     flex-direction: row;
-}
-.button-background{
-    background-color: black;
 }
 
 /* &&&&&&&&&&&&&&&&&&&&&&&& FormErrors &&&&&&&&&&&&&&&&&&&&&&&&&&&& */
