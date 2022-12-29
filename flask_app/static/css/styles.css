@@ -196,6 +196,9 @@ nav{
     background-size: cover;
     background-color: rgb(90, 214, 255);
 }
+.all-gear-container table{
+    width: 60%;
+}
 .gear-table-header{
     background-color: rgb(255, 252, 90);
     border-radius: 15%;
@@ -207,7 +210,7 @@ nav{
 }
 .view-gear-container{
     background-color: rgb(90, 214, 255);
-    border-radius: 10%;
+    border-radius: 15%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -219,15 +222,19 @@ nav{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 60%;
 }
 .gear-view-forms{
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 25%;
-    background-color: rgb(113, 108, 105);
     width: 75%;
-    padding: 5px;
+    padding: 10px;
+}
+.gear-view-forms span{
+    background-color: rgb(113, 108, 105);
+    padding: 10px;
+    border-radius: 25%;
 }
 .gear-form-container{
     margin-top: 20px;

@@ -21,7 +21,7 @@
                 <tr>
                     <th class="gear-table-header">Gear Name:</th>
                     <th class="gear-table-header">Brought By:</th>
-                    <th class="gear-table-header">Quantity:</th>
+                    <th class="gear-table-header"># of:</th>
                 </tr>
                 {% for gear in all_gear %}
                     <tr>
@@ -31,7 +31,9 @@
                             </a>
                         </td>
                         <td class="gear-table-info">
-                            <p>{{gear.username}}</p>
+                            <a href="/gear/{{gear.owner}}/viewall/">
+                                <p>{{gear.username}}</p>
+                            </a>
                         </td>
                         <td class="gear-table-info">
                             <p>{{gear.quantity}}</p>
