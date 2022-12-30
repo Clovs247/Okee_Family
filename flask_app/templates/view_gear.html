@@ -17,18 +17,22 @@
     </header>
     <main>
         <div class="view-gear-container">
-            <div class="view-gear-top">
-                <h1>{{tool.name}}</h1>
-                <p>{{tool.description}}</p>
-                <p>{{tool.quantity}}</p>
-            </div>
-            <div class="gear-view-forms">
-                
-                {% if tool.owner == logged_in_user.id %}
-                    <a href="/gear/{{tool.id}}/delete/">
-                        <span>Delete</span>
-                    </a>
-                {% endif %}
+            <div class="view-gear">
+                <div class="view-gear-top">
+                    <h1>{{tool.name}}</h1>
+                    <div class="gear-info">
+                        <p>Quantity: {{tool.quantity}}</p>
+                        <p>{{tool.description}}</p>
+                    </div>
+                </div>
+                <div class="gear-view-forms">
+                    
+                    {% if tool.owner == logged_in_user.id %}
+                        <a href="/gear/{{tool.id}}/delete/">
+                            <span>Delete</span>
+                        </a>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </main>
