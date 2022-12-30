@@ -322,16 +322,14 @@ nav{
     padding-top: 0px;
     margin: 0vw;
     margin-top: 0px;
-    font-size: large;
     background: url(/static/img/okee_background.jpg) no-repeat center;
     background-size: cover;
-    font-size: 2vh;
     border: 2px solid black;
     box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
 }
 #car_form h1{
     /* font-size: 4vh; */
-    font-size: 20px;
+    font-size: 25px;
     padding: 5px;
     /* background-color: rgb(255, 255, 255); */
     background-color: #e2a5f5;
@@ -347,6 +345,7 @@ nav{
 }
 #car_form span{
     padding: 10px;
+    font-size: 14px;
     background-color: rgb(255, 255, 255);
     border-radius: 20%;
 }
@@ -388,34 +387,118 @@ nav{
 .car-table-header{
     background-color: rgb(255, 252, 90);
     border-radius: 15%;
+    font-size: 18px;
 }
 .car-table-info{
     margin: 10px;
     background-color: rgb(194, 193, 121);
     border-radius: 15%;
+    font-size: 15px;
 }
 .view-car-container{
-    background-color: rgb(90, 214, 255);
-    border-radius: 10%;
+    /* background-color: rgb(90, 214, 255); */
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
     margin: 10px;
     padding: 10px;
+}
+.view-car{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    background: url(/static/img/okee_background.jpg) no-repeat center;
+    background-size: cover;
+    border: 2px solid black;
+    border-radius: 10%;
+    padding: 5px;
 }
 .view-car-top{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 80%;
+}
+.view-car-top h1{
+    font-size: 25px;
+    padding: 5px;
+    background-color: #e2a5f5;
+    border-radius: 20%;
+    border: 2px solid black;
+    margin-bottom: 5px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.car-info{
+    display: flex;
+    color: rgb(90, 214, 255);
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(113, 108, 105);
+    border: 1px solid black;
+    padding: 2px;
+    border-radius: 10%;
+    margin-bottom: 5px;
+}
+.view-car-top p{
+    font-size: 16px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.edit-car{
+    text-decoration: none;
+    background-color: rgb(90, 214, 255);
+    color: black;
+    padding: 7px;
+    border-radius: 34%;
+    box-shadow: 0 7px 7px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
+    border: 2px solid black;
+}
+.edit-car:hover{
+    background-color: #ef2457;
+    border: 2px solid rgb(90, 214, 255);
 }
 .car-view-forms{
     display: flex;
+    padding: 15px;
     flex-direction: column;
     align-items: center;
     border-radius: 25%;
-    background-color: rgb(113, 108, 105);
-    width: 75%;
+    background-color: rgba(239, 236, 78, 0.749);
+    width: 80%;
+    border: 2px solid black;
+    box-shadow: 0 7px 7px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
+}
+.car-members{
+    display: flex;
+    flex-direction: column;
+}
+.car-members h1{
+    font-size: 25px;
+    text-decoration: underline;
+}
+.passengers{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.passengers p{
+    /* color: #e2a5f5; */
+    color: black;
+    padding: 5px;
+}
+#join-car-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#join-car{
+    padding: 10px;
+    background-color: #e2a5f5;
+    border-radius: 34%;
+    box-shadow: 0 7px 7px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
+    border: 2px solid black;
 }
 
 /* &&&&&&&&&&&&&&&&&&&&&&&& DashBoard &&&&&&&&&&&&&&&&&&&&&&&&&&&& */
