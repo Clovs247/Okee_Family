@@ -85,10 +85,6 @@ nav{
     background-color: black;
 }
 .login_background{
-    /* background: url(/static/img/Okee_Jungle_51.jpg) no-repeat center fixed;
-    background-size: cover;
-    background-position: top; */
-    /* background-color: #47c5e8; */
     background-color: #e2a5f5;
 }
 .welcome-div{
@@ -181,9 +177,8 @@ nav{
 
 /* &&&&&&&&&&&&&&&&&&&&&&&& Gear &&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 .gear-background{
-    background: url(/static/img/OMF18-LAKE.jpg) no-repeat right fixed;
+    background: url(/static/img/OMF-Art.jpg) no-repeat center fixed;
     background-size: cover;
-    
     background-color: #4cccf0;
 }
 .all-gear-container{
@@ -335,7 +330,8 @@ nav{
     box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
 }
 #car_form h1{
-    font-size: 4vh;
+    /* font-size: 4vh; */
+    font-size: 20px;
     padding: 5px;
     /* background-color: rgb(255, 255, 255); */
     background-color: #e2a5f5;
@@ -425,16 +421,23 @@ nav{
 /* &&&&&&&&&&&&&&&&&&&&&&&& DashBoard &&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 
 #lineup{
-    width: 100%;
-    opacity:.9;
+    width: 80%;
+    opacity:.8;
     
     margin-top: 15px;
 }
+.lineup-background{
+    background-color: #e2a5f5;
+}
 #campground{
-    width: 90%;
-    opacity:.9;
+    width: 80%;
+    opacity:.7;
     border-radius: 20%;
     margin-top: 15px;
+    border: 2px solid black;
+}
+.campground-background{
+    background-color: #e2a5f5;
 }
 .dashboard-container{
     display: flex;
@@ -444,7 +447,8 @@ nav{
 }
 .dashboard-container h1{
     margin-bottom: 0px;
-    font-size: 5vh;
+    /* font-size: 5vh; */
+    font-size: 45px;
     padding: 5px;
     background-color: #e2a5f5;
     border-radius: 34%;
@@ -452,7 +456,8 @@ nav{
 }
 .dashboard-container h2{
     margin: 1vw;
-    font-size: 5vh;
+    /* font-size: 5vh; */
+    font-size: 35px;
     padding: 5px;
     background-color: #e2a5f5;
     border-radius: 34%;
@@ -467,6 +472,9 @@ nav{
     width: 314px;
     border: 2px solid black;
     position: relative;
+}
+.playlist-background{
+    background-color: #e2a5f5;
 }
 .main-playlist-container{
     display: flex;
@@ -484,6 +492,17 @@ nav{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 5px;
+}
+.playlist-link p{
+    font-size: 16px;
+    padding: 5px;
+    background-color: rgb(90, 214, 255);
+    /* background-color: #e2a5f5; */
+    border-radius: 34%;
+    align-items: center;
+    display:flex;
+    border: 2px solid black;
 }
 
 
