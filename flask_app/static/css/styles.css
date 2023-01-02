@@ -1,6 +1,6 @@
 body{
     /* margin:3vw; */
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     /* font-family: Arial; */
 }
 nav{
@@ -8,43 +8,67 @@ nav{
     margin: 0px;
     background: url(/static/img/Okee_passes.jpg) no-repeat center;
     background-size: cover;
+    flex-direction: column;
 }
 .nav{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     width: auto;
-}
-.header_container{
-    display: flex;
-    justify-content: space-around;
-    width: auto;
-    align-items: center;
+    border: 1.5px solid black;
+    box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
     padding: 10px;
     margin: 0px;
 }
+.header_container{
+    display: flex;
+    width: auto;
+    padding: 10px;
+    margin: 0px;
+    flex-direction: column;
+    border: 2px solid black;
+    box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
+}
+#menu-avatar{
+    margin: 20px;
+    border-radius: 50%;
+    width: 100px;
+    border: 2px solid black;
+    position: relative;
+}
+.time_container{
+    width: 100%;
+    text-align: center;
+}
 .foot_container{
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     text-align: center;
-    color: white;
+    background: url(/static/img/Okee_passes.jpg) no-repeat center;
+    background-size: cover;
+    border: 1.5px solid black;
 }
-.left-nav{
+.top-nav{
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
 }
-.right-nav{
-    display: flex;
-    flex-direction: row;
-}
-.center-nav{
+.bottom-nav{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 main{
     margin:3vw;
 }
-
+.login_link{
+    display: flex;
+    padding: 6px;
+    border-radius: 10%;
+    background-color: black;
+    box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
+}
 /* &&&&&&&&&&&&&&&&&&&&&&&& FormErrors &&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 .error-container{
     display: flex;
@@ -82,18 +106,14 @@ main{
 }
 
 /* &&&&&&&&&&&&&&&&&&&&&&&& Index/Login &&&&&&&&&&&&&&&&&&&&&&&&&&&& */
-.login_link{
-    display: flex;
-    padding: 6px;
-    border-radius: 10%;
-    background-color: black;
-}
+
 .login_background{
     background-color: #e2a5f5;
 }
 .welcome-div{
     display: flex;
     justify-content: center;
+    
 }
 .welcome_title{
     display: flex;
@@ -106,12 +126,13 @@ main{
     border-radius: 40%;
     text-align: center;
     border: 2px solid black;
+    box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
 }
 .welcome_title h1{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 5vh;
+    padding: 10px;
     background-color: rgb(255, 255, 255);
     border-radius: 34%;
     border: 2px solid black;
@@ -124,6 +145,7 @@ main{
 .login_container{
     display: flex;
     margin: 10px;
+    margin-bottom: 100px;
     width: auto;
     justify-content: center;
 }
