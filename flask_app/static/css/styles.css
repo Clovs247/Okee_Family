@@ -372,10 +372,7 @@ main{
 
 /* &&&&&&&&&&&&&&&&&&&&&&&& Car &&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 .car-background{
-    background: url(/static/img/OMF-Camping.jpg) no-repeat center fixed;
-    background-size: cover;
-    background-position: top;
-    background-color: #4cccf0;
+    background-color: #e2a5f5;
 }
 .car-form-container{
     margin-top: 20px;
@@ -415,8 +412,8 @@ main{
     align-items: center;
 }
 #car_form span{
-    padding: 10px;
-    font-size: 14px;
+    font-size: 12px;
+    padding: 6px;
     background-color: rgb(255, 255, 255);
     border-radius: 20%;
 }
@@ -425,6 +422,7 @@ main{
     justify-content: center;
     margin: 4px;
     padding: 4px;
+    font-size: 16px;
     text-align: center;
     border-radius: 23%;
     box-shadow: 0 7px 7px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
@@ -437,58 +435,75 @@ main{
     justify-content: center;
 }
 #car-submit{
-    padding: 5px;
-    border-radius: 25%;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
+    background-color: rgb(211 248 130);
 }
 .all-car-container{
-    background-color: rgb(90, 214, 255);
-    border-radius: 10%;
+    /* background-color: rgb(90, 214, 255); */
     display: flex;
     justify-content: center;
-    padding: 5vw;
+    width: auto;
     margin: 10px;
+    margin-bottom: 100px;
+}
+.all-car-container table{
+    border-radius: 10%;
+    padding: 7vw;
     background: url(/static/img/okee_background.jpg) no-repeat center;
     background-size: cover;
     border: 2px solid black;
     box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
 }
-.all-car-container table{
-    width: 80%;
-}
 .car-table-header{
-    background-color: rgb(255, 252, 90);
+    background-color: #e2a5f5;
     border-radius: 15%;
     font-size: 18px;
+    padding: 6px;
+}
+.car-table-row{
+    background-color: white;
 }
 .car-table-info{
     margin: 10px;
-    background-color: rgb(194, 193, 121);
+    background-color: white;
     border-radius: 15%;
     font-size: 15px;
+}
+.car-table-info a{
+    background-color: #4cccf0;
+    border: 2px solid black;
+    padding: 4px;
+    border-radius: 30%;
+}
+.car-table-info a:hover{
+    background-color: rgb(211 248 130);
 }
 .view-car-container{
     /* background-color: rgb(90, 214, 255); */
     display: flex;
     justify-content: center;
+    width: auto;
     margin: 10px;
-    padding: 10px;
+    margin-bottom: 100px;
 }
 .view-car{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
+    width: auto;
     background: url(/static/img/okee_background.jpg) no-repeat center;
     background-size: cover;
     border: 2px solid black;
     border-radius: 10%;
-    padding: 5px;
+    padding: 7vw;
+    padding-top: 10px;
 }
 .view-car-top{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
 }
 .view-car-top h1{
     font-size: 25px;
@@ -537,7 +552,6 @@ main{
     align-items: center;
     border-radius: 25%;
     background-color: rgba(239, 236, 78, 0.749);
-    width: 80%;
     border: 2px solid black;
     box-shadow: 0 7px 7px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
 }
