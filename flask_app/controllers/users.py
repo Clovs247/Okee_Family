@@ -22,6 +22,9 @@ def login():
     if not id:
         flash("That email isn't in our database yet. Please Register")
         return redirect('/login/form/')
+    if not bcrypt.check_password_hash(id.password, request.form['password']):
+        flash("Wrong Password")
+        return redirect('/login/form/')
     else:
         session['user_id'] = id.id
         return redirect('/dashboard/')
