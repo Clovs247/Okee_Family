@@ -206,33 +206,46 @@ main{
 
 /* &&&&&&&&&&&&&&&&&&&&&&&& Gear &&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 .gear-background{
-    background: url(/static/img/OMF-Art.jpg) no-repeat center fixed;
-    background-size: cover;
-    background-color: #4cccf0;
+    background-color: #e2a5f5;
 }
 .all-gear-container{
-    border-radius: 15%;
-    padding: 5vw;
-    margin: 10px;
     display: flex;
     justify-content: center;
+    width: auto;
+    margin: 10px;
+    margin-bottom: 100px;
+}
+.all-gear-container table{
+    border-radius: 10%;
+    padding: 7vw;
     background: url(/static/img/okee_background.jpg) no-repeat center;
     background-size: cover;
-    background-color: rgb(90, 214, 255);
     border: 2px solid black;
     box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
 }
-.all-gear-container table{
-    width: 80%;
-}
 .gear-table-header{
-    background-color: rgb(255, 252, 90);
+    background-color: #e2a5f5;
     border-radius: 15%;
+    font-size: 18px;
+    padding: 6px;
+}
+.gear-table-row{
+    background-color: white;
 }
 .gear-table-info{
     margin: 10px;
-    background-color: rgb(194, 193, 121);
+    background-color: white;
     border-radius: 15%;
+    font-size: 15px;
+}
+.gear-table-info a{
+    background-color: #4cccf0;
+    border: 2px solid black;
+    padding: 4px;
+    border-radius: 30%;
+}
+.gear-table-info a:hover{
+    background-color: rgb(211 248 130);
 }
 .view-gear-container{
     display: flex;
@@ -441,7 +454,6 @@ main{
     background-color: rgb(211 248 130);
 }
 .all-car-container{
-    /* background-color: rgb(90, 214, 255); */
     display: flex;
     justify-content: center;
     width: auto;

@@ -24,15 +24,15 @@
                     <th class="gear-table-header"># of:</th>
                 </tr>
                 {% for gear in all_gear %}
-                    <tr>
+                    <tr class="gear-table-row">
                         <td class="gear-table-info">
                             <a href="/gear/{{gear.id}}/view/">
-                                <p>{{gear.name}}</p>
+                                <span>{{gear.name}}</span>
                             </a>
                         </td>
                         <td class="gear-table-info">
                             <a href="/gear/{{gear.owner}}/viewall/">
-                                <p>{{gear.username}}</p>
+                                <span>{{gear.username}}</span>
                             </a>
                         </td>
                         <td class="gear-table-info">
