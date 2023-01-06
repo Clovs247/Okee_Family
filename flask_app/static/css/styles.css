@@ -322,6 +322,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 100px;
 }
 #gear_form{
     display: flex;
@@ -333,15 +334,14 @@ main{
     padding-top: 0px;
     margin: 0vw;
     margin-top: 0px;
-    font-size: large;
     background: url(/static/img/okee_background.jpg) no-repeat center;
     background-size: cover;
-    font-size: 2vh;
     border: 2px solid black;
     box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
 }
 #gear_form h1{
-    font-size: 4vh;
+    /* font-size: 4vh; */
+    font-size: 25px;
     padding: 5px;
     /* background-color: rgb(255, 255, 255); */
     background-color: #e2a5f5;
@@ -356,7 +356,8 @@ main{
     align-items: center;
 }
 #gear_form span{
-    padding: 10px;
+    font-size: 12px;
+    padding: 6px;
     background-color: rgb(255, 255, 255);
     border-radius: 20%;
 }
@@ -365,18 +366,19 @@ main{
     justify-content: center;
     margin: 4px;
     padding: 4px;
+    font-size: 16px;
     text-align: center;
     border-radius: 23%;
     box-shadow: 0 7px 7px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
 }
 #gear-submit{
-    padding: 1vh;
+    padding: 15px;
     cursor: pointer;
-    border-radius: 25%;
     box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
+    background-color: rgb(211 248 130);
 }
 .small-band{
-    width: 40%;
+    width: 30%;
 }
 #small-band{
     display: flex;
@@ -389,6 +391,7 @@ main{
 }
 .car-form-container{
     margin-top: 20px;
+    margin-bottom: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -602,8 +605,6 @@ main{
 
 #lineup{
     width: 100%;
-    opacity:.8;
-    
     margin-top: 15px;
 }
 .lineup-background{
@@ -611,9 +612,9 @@ main{
 }
 #campground{
     width: 80%;
-    opacity:.7;
     border-radius: 20%;
     margin-top: 15px;
+    margin-bottom: 100px;
     border: 2px solid black;
 }
 .campground-background{
