@@ -7,7 +7,9 @@ nav{
     margin: 0px;
     background: url(/static/img/Okee_passes.jpg) no-repeat center;
     background-size: cover;
-    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
 }
 .nav{
     display: flex;
@@ -61,6 +63,7 @@ nav{
 }
 main{
     margin:3vw;
+    margin-top: 150px;
 }
 .login_link{
     display: flex;
@@ -113,7 +116,7 @@ main{
 .welcome-div{
     display: flex;
     justify-content: center;
-    
+    margin-top: 230px;
 }
 .welcome_title{
     display: flex;
