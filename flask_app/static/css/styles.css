@@ -40,6 +40,14 @@ nav{
     width: 100%;
     text-align: center;
 }
+#countdown{
+    font-weight: 600;
+}
+.time_container #countdown{
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 25px;
+}
 .foot_container{
     position: fixed;
     left: 0;
@@ -48,7 +56,7 @@ nav{
     text-align: center;
     background: url(/static/img/Okee_passes.jpg) no-repeat center;
     background-size: cover;
-    border: 1.5px solid black;
+    border: 2px solid black;
     box-shadow: 0 -1px 20px 0 rgba(0, 0, 0, 0.364), 0 -17px 50px 0 rgba(0, 0, 0, 0.216);
 }
 .top-nav{
@@ -159,6 +167,7 @@ main{
     width: auto;
     border-radius: 10%;
     padding: 7vw;
+    padding-bottom: 20px;
     padding-top: 0px;
     margin: 5vw;
     margin-top: 0px;
