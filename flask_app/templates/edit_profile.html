@@ -17,9 +17,34 @@
     </header>
     <main>
         <div class="dashboard-container">
+            <h1>Edit Profile</h1>
             <h1>Welcome, {{logged_in_user.username}}</h1>
-            
-            
+            <div class="edit-profile">
+                <form action="/profile/update/" method="post" class="edit-profile-form">
+                    {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        <div class="error-container">
+                            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                            <div class="error-back">
+                                <p class="error-par">One Moment, I think there was an Error</p>
+                                {% for message in messages %}
+                                    <p class="error-info">{{message}}</p>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endif %}
+                    {% endwith %}
+                    <label>
+                        <span>Email:</span>
+                        <input type="email" name="email" value="{{logged_in_user.email}}">
+                    <label>
+                    <label>
+                        <span>Username:</span>
+                        <input type="text" name="username" id="username" value="{{logged_in_user.username}}">
+                    <label>
+                    <input type="submit" value="Update" id="submit">
+                </form>
+            </div>
         </div>
     </main>
     <footer>
@@ -32,4 +57,4 @@
     </footer>
     <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js')}}"></script>
 </body>
-</html>
+</html> 

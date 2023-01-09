@@ -55,8 +55,8 @@ def register():
             session["user_id"] = id
             return redirect('/dashboard/')
 
-@app.route('/profile/<int:user_id>')
-def edit_profile(user_id):
+@app.route('/profile/edit/')
+def edit_profile():
     if 'user_id' not in session:
         return redirect('/')
     else:
@@ -65,3 +65,21 @@ def edit_profile(user_id):
         }
         logged_in_user = user.User.get_user_by_id(data)
         return render_template('edit_profile.html', logged_in_user=logged_in_user)
+
+@app.route('/profile/update/', methods=['post'])
+def update_user():
+    is_valid=user.User.validate_update(request.form)
+    if not is_valid:
+        return redirect('/')
+    else: user_data = {
+        'id' : session['user_id'],
+        'username' : session['username'],
+        'email' : session['email']
+    }
+    user.User.update_user(user_data)
+    return redirect('/dashboard/')
+
+@app.route('/logout/')
+def logout():
+    session.clear()
+    return redirect('/')

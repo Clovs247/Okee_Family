@@ -118,5 +118,28 @@ class User:
             flash("Password are not matching, double check your spelling.")
         return is_valid
 
+    @staticmethod
+    def validate_update(user):
+        is_valid=True
+        query = """
+        SELECT * FROM user
+        WHERE email = %(email)s
+        ;"""
+        results = connectToMySQL(User.db).query_db(query, user)
+        if len(results) > 1:
+            is_valid=False
+            flash("That email is already in use. Choose another.")
+        if not EMAIL_REGEX.match(user['email']):
+            is_valid=False
+            flash("Invalid Email Format")
+        if len(user['username']) < 1:
+            is_valid=False
+            flash("Username must contain at least 1 character")
+        if len(user['username']) > 15:
+            is_valid=False
+            flash("Username must not contain more than 15 characters")
+        return is_valid
+
+
 # &&&&&&&&&&&&&&&&&&&&&&&&&&&&&& Connection &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 

@@ -17,7 +17,7 @@ def dashboard():
         logged_in_user = user.User.get_user_by_id(data)
         all_users = user.User.get_all_users()
         return render_template('dashboard.html', logged_in_user=logged_in_user)
-    
+
 @app.route('/lineup/')
 def lineup():
     if 'user_id' not in session:
@@ -28,7 +28,7 @@ def lineup():
         }
         logged_in_user = user.User.get_user_by_id(data)
         return render_template('lineup.html', logged_in_user=logged_in_user)
-    
+
 @app.route('/campground/')
 def campground():
     if 'user_id' not in session:
@@ -39,7 +39,7 @@ def campground():
         }
         logged_in_user = user.User.get_user_by_id(data)
         return render_template('campgrounds.html', logged_in_user=logged_in_user)
-    
+
 @app.route('/playlist/')
 def playlist():
     if 'user_id' not in session:
@@ -50,8 +50,4 @@ def playlist():
         }
         logged_in_user = user.User.get_user_by_id(data)
         return render_template('playlists.html', logged_in_user=logged_in_user)
-    
-@app.route('/logout/')
-def logout():
-    session.clear()
-    return redirect('/')
+
