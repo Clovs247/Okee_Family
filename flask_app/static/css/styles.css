@@ -224,7 +224,6 @@ main{
 #edit-profile{
     display: flex;
     margin: 10px;
-    margin-bottom: 100px;
     width: auto;
     justify-content: center;
 }
@@ -272,6 +271,18 @@ main{
     font-size: 16px;
     border-radius: 23%;
     box-shadow: 0 7px 7px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
+}
+#delete{
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
+    background-color: rgb(211 248 130);
+    border-radius: 23%;
+    text-decoration: none;
+}
+#delete:hover{
+    background-color: #ef2457;
+    border: 2px solid #ef2457;
 }
 
 /* &&&&&&&&&&&&&&&&&&&&&&&& Gear &&&&&&&&&&&&&&&&&&&&&&&&&&&& */

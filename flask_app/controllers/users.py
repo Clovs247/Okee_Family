@@ -79,6 +79,14 @@ def update_user():
     user.User.update_user(user_data)
     return redirect('/dashboard/')
 
+@app.route('/delete/profile/')
+def delete_profile():
+    data={
+        'id' :session['user_id']
+    }
+    user.User.delete_user(data)
+    return redirect('/')
+
 @app.route('/logout/')
 def logout():
     session.clear()
