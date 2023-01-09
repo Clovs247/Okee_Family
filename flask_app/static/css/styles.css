@@ -122,7 +122,7 @@ main{
     margin: 0px;
 }
 
-/* &&&&&&&&&&&&&&&&&&&&&&&& Index/Login &&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+/* &&&&&&&&&&&&&&&&&&&&&&&& Index/User &&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 
 .login_background{
     background-color: #e2a5f5;
@@ -216,6 +216,62 @@ main{
     cursor: pointer;
     box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
     background-color: rgb(211 248 130);
+}
+#submit:hover{
+    background-color: #e2a5f5;
+    border: 2px solid rgb(90, 214, 255);
+}
+#edit-profile{
+    display: flex;
+    margin: 10px;
+    margin-bottom: 100px;
+    width: auto;
+    justify-content: center;
+}
+#edit-profile-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    border-radius: 10%;
+    padding: 7vw;
+    padding-bottom: 20px;
+    padding-top: 0px;
+    margin: 5vw;
+    margin-top: 0px;
+    background: url(/static/img/okee_background.jpg) no-repeat center;
+    background-size: cover;
+    border: 2px solid black;
+    box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
+}
+#edit-profile-form h1{
+    padding: 5px;
+    background-color: #e2a5f5;
+    border-radius: 34%;
+    align-items: center;
+    display:flex;
+    border: 2px solid black;
+}
+#edit-profile-form label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#edit-profile-form span{
+    font-size: 12px;
+    padding: 6px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20%;
+}
+#edit-profile-form input{
+    display: flex;
+    justify-content: center;
+    margin: 4px;
+    padding: 4px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 23%;
+    box-shadow: 0 7px 7px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
 }
 
 /* &&&&&&&&&&&&&&&&&&&&&&&& Gear &&&&&&&&&&&&&&&&&&&&&&&&&&&& */

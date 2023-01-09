@@ -17,10 +17,9 @@
     </header>
     <main>
         <div class="dashboard-container">
-            <h1>Edit Profile</h1>
-            <h1>Welcome, {{logged_in_user.username}}</h1>
-            <div class="edit-profile">
-                <form action="/profile/update/" method="post" class="edit-profile-form">
+            <div id="edit-profile">
+                <form action="/profile/update/" method="post" id="edit-profile-form">
+                    <h1>Edit Profile</h1>
                     {% with messages = get_flashed_messages() %}
                     {% if messages %}
                         <div class="error-container">
