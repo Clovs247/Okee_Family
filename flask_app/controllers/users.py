@@ -55,3 +55,13 @@ def register():
             session["user_id"] = id
             return redirect('/dashboard/')
 
+@app.route('/profile/<int:user_id>')
+def edit_profile(user_id):
+    if 'user_id' not in session:
+        return redirect('/')
+    else:
+        data={
+            'id':session['user_id']
+        }
+        logged_in_user = user.User.get_user_by_id(data)
+        return render_template('edit_profile.html', logged_in_user=logged_in_user)
