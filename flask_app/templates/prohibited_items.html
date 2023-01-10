@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Prohibited Items</title>
+</head>
+<body class="dash-background">
+    <header>
+        <nav>
+            {% block menu %} {% include 'logged_in_menu.html' %} {% endblock menu %}
+        </nav>
+    </header>
+    <main>
+        <div class="prohibited-container">
+            <div>
+                <h1>Prohibited Items</h1>
+                <p>Here is a condensed list of the Prohibited Items</p>
+                <p>If you want the official list</p>
+                <a href="https://www.okeechobeefest.com/guide/camping-guidelines/" class="">Click Here</a>
+            </div>
+            <div>
+                <div>
+                    <p>Aerosol Products</p>
+                    <p>Bota Bag</p>
+                    <p>Breakable Glass or Mirrors(smaller than 8"x8")</p>
+                    <p>Butane Accessories</p>
+                    <p>Costumes that resemble safety uniforms</p>
+                    <p>Camping Wind Turpines</p>
+                    <p>Candles or live flames</p>
+                    <p>Dollies Or Hand Trucks</p>
+                    <p>Drones</p>
+                    <p>Drugs/Illegal Substances</p>
+                    <p>Dry Ice</p>
+                    <p>Fireworks</p>
+                    <p>Generators</p>
+                    <p>Gas Masks</p>
+                    <p>Helium Ballons</p>
+                    <p>Hookah</p>
+                </div>
+                <div>
+                    <p>Large Chains/Spiked Jewelry</p>
+                    <p>Large Speakers</p>
+                    <p>Laser Pointers</p>
+                    <p>Hookah</p>
+                    <p>Hookah</p>
+                    <p>Hookah</p>
+                    <p>Hookah</p>
+                    <p>Hookah</p>
+                    <p>Hookah</p>
+                    <p>Hookah</p>
+                    <p>Hookah</p>
+                    <p>Hookah</p>
+                    <p>Hookah</p>
+                    <p>Hookah</p>
+                    <p>Hookah</p>
+                    <p>Hookah</p>
+                    <p>Hookah</p>
+                    <p>Hookah</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <foot>
+            <div class="foot_container">
+                <p>Countdown to Okee</p>
+                <p id="countdown"></p>
+            </div>
+        </foot>
+    </footer>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js')}}"></script>
+</body>
+</html>
