@@ -547,6 +547,13 @@ main{
     align-items: center;
     margin-bottom: 100px;
 }
+.rules-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
 
 /* &&&&&&&&&&&&&&&&&&&&&&&& Car &&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 
