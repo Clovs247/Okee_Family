@@ -540,6 +540,13 @@ main{
     display: flex;
     text-align: center;
 }
+.food-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
 
 /* &&&&&&&&&&&&&&&&&&&&&&&& Car &&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 
