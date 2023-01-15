@@ -322,14 +322,13 @@ main{
     font-size: 15px;
 }
 .gear-table-info a{
-    background-color: #4cccf0;
-    border: 2px solid black;
-    padding: 4px;
-    border-radius: 30%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
-.gear-table-info a:hover{
+/* .gear-table-info a:hover{
     background-color: rgb(211 248 130);
-}
+} */
 .view-gear-container{
     display: flex;
     justify-content: center;
