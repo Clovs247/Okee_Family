@@ -31,41 +31,39 @@
                         <p># of seats:</p>
                         <p>{{vessel.car_capacity}}</p>
                     </div>
-                </div>
-
-                <div class="car-view-forms">
-                    <div class="car-members">
-                        <h1>Occupants</h1>
-                    {% for passenger in vessel.passengers %}
-                    <div class="passengers">
-                        <p>{{passenger.username}}</p>
-                        {% if logged_in_user.id == passenger.id %}
-                            <a href="/car/{{vessel.id}}/leave" class="edit-car">Leave</a>
+                    <div class="car-view-forms">
+                        <div class="car-members">
+                            <h1>Occupants</h1>
+                        {% for passenger in vessel.passengers %}
+                        <div class="passengers">
+                            <p>{{passenger.username}}</p>
+                            {% if logged_in_user.id == passenger.id %}
+                                <a href="/car/{{vessel.id}}/leave" class="edit-car">Leave</a>
+                            {% endif %}
+                        </div>
+                        {% endfor %}
+                        </div>
+                    
+                        {% if vessel.passengers|length < vessel.car_capacity %}
+                        <form action="/join/{{vessel.id}}/form/" method="post" id="join-car-form">
+                            
+                            {% with messages = get_flashed_messages() %}
+                                {% if messages %}
+                                    <strong class="error-par">One Second</strong>
+                                    {% for message in messages %}
+                                        <p id="error-info">{{message}}</p>
+                                    {% endfor %}
+                                {% endif %}
+                            {% endwith %}
+        
+                            <label>
+                                <input type="submit" value="Join" id="join-car">
+                            </label>
+                        </form>
                         {% endif %}
                     </div>
-                    {% endfor %}
-                    </div>
-                
-                    {% if vessel.passengers|length < vessel.car_capacity %}
-                    <form action="/join/{{vessel.id}}/form/" method="post" id="join-car-form">
-                        
-                        {% with messages = get_flashed_messages() %}
-                            {% if messages %}
-                                <strong class="error-par">Hold Up, Chum</strong>
-                                {% for message in messages %}
-                            </div>
-                            </div>
-                                    <p id="error-info">{{message}}</p>
-                                {% endfor %}
-                            {% endif %}
-                        {% endwith %}
-    
-                        <label>
-                            <input type="submit" value="Join" id="join-car">
-                        </label>
-                    </form>
-                    {% endif %}
                 </div>
+
             </div>
         </div>
     </main>

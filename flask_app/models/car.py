@@ -174,10 +174,10 @@ class Car:
         print("***************VALIDATE*************",car_data)
         if len(car_data['car_name']) <= 3:
             is_valid = False
-            flash("Please name your car with at least 3 characters, so we know which car is which.")
+            flash("Please label your car with at least 3 characters.")
         if int(car_data['car_capacity']) < 0:
             is_valid =False
-            flash("Please enter in how many people sit in your car.")
+            flash("Please enter in how many people fit in your car.")
         return is_valid
     
     @staticmethod
@@ -190,6 +190,6 @@ class Car:
         ;"""
         results = connectToMySQL(Car.db).query_db(query, rider)
         if len(results)>0:
-            flash("One seat can fit One rider. Leave the extra seat to someone else.")
+            flash("No Duplicates")
             is_valid= False
         return is_valid

@@ -38,7 +38,7 @@ def form_car():
     is_valid = car.Car.validate_car(car_data)
     if not is_valid:
         flash('Please enter in valid info.')
-        return redirect('/')
+        return redirect('/create/car/')
     else:
         print("***********CREATE CAR FORM***************", car_data)
         car.Car.create_car(car_data)
