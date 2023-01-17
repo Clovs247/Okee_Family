@@ -293,9 +293,11 @@ main{
 }
 .all-gear-container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    text-align: center;
+    align-items: center;
     width: auto;
-    margin: 10px;
     margin-bottom: 100px;
 }
 .all-gear-container table{
@@ -326,9 +328,6 @@ main{
     text-align: center;
     justify-content: center;
 }
-/* .gear-table-info a:hover{
-    background-color: rgb(211 248 130);
-} */
 .view-gear-container{
     display: flex;
     justify-content: center;
@@ -727,15 +726,6 @@ main{
     border-radius: 15%;
     font-size: 15px;
 }
-/* .car-table-info a{
-    background-color: #4cccf0;
-    border: 2px solid black;
-    padding: 4px;
-    border-radius: 30%;
-}
-.car-table-info a:hover{
-    background-color: rgb(211 248 130);
-} */
 .view-car-container{
     /* background-color: rgb(90, 214, 255); */
     display: flex;
