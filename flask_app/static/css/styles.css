@@ -697,10 +697,11 @@ main{
 }
 .all-car-container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     text-align: center;
+    align-items: center;
     width: auto;
-    margin: 10px;
     margin-bottom: 100px;
 }
 .all-car-container table{
