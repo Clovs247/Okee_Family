@@ -71,9 +71,10 @@ def view_gear_by_owner(owner_id):
             'id':owner_id
         }
         logged_in_user=user.User.get_user_by_id(data)
+        operator=user.User.get_user_by_id(owner_data)
         tools = gear.Gear.get_gear_by_user(owner_data)
         # print("############################", tool)
-        return render_template('view_owner_gear.html', logged_in_user=logged_in_user, tools=tools)
+        return render_template('view_owner_gear.html', logged_in_user=logged_in_user, tools=tools, operator=operator)
     
 @app.route('/gear/<int:gear_id>/delete/')
 def delete_gear(gear_id):

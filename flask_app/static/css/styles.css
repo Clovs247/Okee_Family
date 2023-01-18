@@ -547,80 +547,7 @@ main{
     align-items: center;
     margin-bottom: 100px;
 }
-.rules-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 100px;
-}
-.rules-top{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(90, 214, 255);
-    border-radius: 10%;
-    padding: 5vw;
-    padding-top: 0px;
-    margin: 0vw;
-    margin-top: 0px;
-    background: url(/static/img/okee_background.jpg) no-repeat center;
-    background-size: cover;
-    border: 2px solid black;
-    box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
-}
-.rules-top h1{
-    font-size: 25px;
-    padding: 5px;
-    background-color: #e2a5f5;
-    border-radius: 34%;
-    align-items: center;
-    display:flex;
-    border: 2px solid black;
-}
-.rules-top p{
-    font-size: 12px;
-    margin: 0px;
-    padding: 6px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 20%;
-}
-.rules-top a{
-    padding: 6px;
-    cursor: pointer;
-    box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
-    background-color: rgb(211 248 130);
-    border-radius: 23%;
-}
-.rules-list{
-    display: flex;
-}
-.rule-time{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-.rule-alcohol{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-.rule-alcohol-individual{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-.rule-alcohol-car{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-.rule-medication{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
+
 
 /* &&&&&&&&&&&&&&&&&&&&&&&& Car &&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 
@@ -908,7 +835,82 @@ main{
     display:flex;
     border: 2px solid black;
 }
-
+.rules-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.rules-top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(90, 214, 255);
+    border-radius: 10%;
+    padding: 5vw;
+    padding-top: 0px;
+    margin: 0vw;
+    margin-top: 0px;
+    background: url(/static/img/okee_background.jpg) no-repeat center;
+    background-size: cover;
+    border: 2px solid black;
+    box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
+}
+.rules-top h1{
+    font-size: 25px;
+    padding: 5px;
+    background-color: #e2a5f5;
+    border-radius: 34%;
+    align-items: center;
+    display:flex;
+    border: 2px solid black;
+}
+.rules-top p{
+    font-size: 12px;
+    margin: 0px;
+    padding: 6px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20%;
+}
+.rules-top a{
+    padding: 6px;
+    cursor: pointer;
+    box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
+    background-color: rgb(211 248 130);
+    border-radius: 23%;
+}
+.rules-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.rule-time{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.rule-alcohol{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.rule-alcohol-individual{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.rule-alcohol-car{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.rule-medication{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
 /* &&&&&&&&&&&&&&&&&&&&&&&& UnRegistered &&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 
 
