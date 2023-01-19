@@ -774,6 +774,7 @@ main{
     margin-top: 15px;
     margin-bottom: 100px;
     border: 2px solid black;
+    box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
 }
 .campground-background{
     background-color: #e2a5f5;
@@ -835,6 +836,9 @@ main{
     display:flex;
     border: 2px solid black;
 }
+.playlist-link iframe{
+    box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
+}
 .rules-container{
     display: flex;
     flex-direction: column;
@@ -890,26 +894,56 @@ main{
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding: 15px;
+    margin: 10px;
+    background-color: #e2a5f5;
+    border-radius: 15%;
+    border: 2px solid black;
+}
+.rule-time h2{
+    text-decoration-line: underline;
 }
 .rule-alcohol{
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin: 10px;
+    padding: 15px;
+    background-color: #e2a5f5;
+    border-radius: 15%;
+    border: 2px solid black;
+}
+.rule-alcohol h2{
+    text-decoration-line: underline;
 }
 .rule-alcohol-individual{
     display: flex;
     flex-direction: column;
     text-align: center;
 }
+.rule-alcohol-individual h5{
+    text-decoration-line: underline;
+}
 .rule-alcohol-car{
     display: flex;
     flex-direction: column;
     text-align: center;
 }
+.rule-alcohol-car h5{
+    text-decoration-line: underline;
+}
 .rule-medication{
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding: 20px;
+    margin: 10px;
+    background-color: #e2a5f5;
+    border-radius: 15%;
+    border: 2px solid black;
+}
+.rule-medication h2{
+    text-decoration-line: underline;
 }
 /* &&&&&&&&&&&&&&&&&&&&&&&& UnRegistered &&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 
