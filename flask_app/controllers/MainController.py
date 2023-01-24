@@ -18,7 +18,7 @@ def dashboard():
         all_users = user.User.get_all_users()
         return render_template('dashboard.html', logged_in_user=logged_in_user)
 
-@app.route('/lineup/')
+@app.route('/lineup-promo/')
 def lineup():
     if 'user_id' not in session:
         return redirect('/')

@@ -15,7 +15,8 @@ class User:
         self.updated_at = data['updated_at']
         
         self.car = []
-        # self.gear = []
+        self.gear = []
+        self.like = []
 
 
 # &&&&&&&&&&&&&&&&&&&&&&&&&&&&&& Create &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
