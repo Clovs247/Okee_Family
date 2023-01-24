@@ -16,9 +16,13 @@
         </nav>
     </header>
     <main>
-        <div class="dashboard-container">
-            <img src="/static/img/OMF-LINEUP.png" alt="Lineup" id="lineup">
-            <h1>{{logged_in_user.username}}</h1>
+        <div class="lineup-container">
+            {% for artist in lineup %}
+                <div class="performer">
+                <h3>{{artist.artist_name}}</h3>
+                <p>{{artist.set_time}}</p>
+                </div>
+            {% endfor %}
         </div>
     </main>
     <footer>

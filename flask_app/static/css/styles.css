@@ -765,8 +765,33 @@ main{
     width: 100%;
     margin-top: 15px;
 }
+#music-map{
+    width: 100%;
+    border-radius: 10%;
+}
 .lineup-background{
     background-color: #e2a5f5;
+}
+.lineup-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.performer{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    padding: 5px;
+    border: 2px solid black;
+    box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.364), 0 17px 50px 0 rgba(0, 0, 0, 0.216);
+    border-radius: 20%;
+}
+.performer h3{
+    padding: 5px;
 }
 #campground{
     width: 80%;
