@@ -20,7 +20,8 @@
             {% for artist in lineup %}
                 <div class="performer">
                 <h3>{{artist.artist_name}}</h3>
-                <p>{{artist.set_time}}</p>
+                <p>{{artist.set_time.date()}}</p>
+                <p>{{artist.set_time.time()}}</p>
                 </div>
             {% endfor %}
         </div>
