@@ -539,13 +539,43 @@ main{
     display: flex;
     text-align: center;
 }
-.food-container{
+.menu-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     align-items: center;
     margin-bottom: 100px;
+}
+.food-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.food-menu{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+    margin: 10px;
+    background-color: #e2a5f5;
+    border-radius: 15%;
+    border: 2px solid black;
+}
+.food-menu h3{
+    font-size: 20px;
+    padding: 10px;
+    margin: 8px;
+    background-color: white;
+    border-radius: 20%;
+}
+.food-menu h5{
+    font-size: 15px;
+    text-decoration: underline;
+}
+.food-menu p{
+    font-size: 12px;
 }
 
 
