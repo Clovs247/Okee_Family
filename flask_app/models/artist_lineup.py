@@ -7,6 +7,7 @@ class Artist_lineup:
     def __init__(self, data):
         self.id = data['id']
         self.artist_name = data['artist_name']
+        self.stage_name = data['stage_name']
         self.set_time = data['set_time']
         self.total_likes = 0
 
