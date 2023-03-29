@@ -5,7 +5,7 @@
 This is a passion project I made to help organize the group of people that I'm going to the event with.
 
 # IP address
-http://52.91.53.215/
+I disabled this application since the event passed. I'll probably revisit this anytime I try to plan a camping trip.
 
 # Purpose
 This app is to 
